@@ -56,10 +56,10 @@ async function checkActiveVersions() {
  * @returns Nova versão caso tiver sido atualizado, null constrário
  */
 async function updateLatest() {
-  process.stderr.write(`Cheking latest update`);
+  process.stderr.write(`Cheking latest update\n`);
   const latest = await checkUpdate();
   if (!latest.isUpdated) {
-    process.stderr.write(`New version available\n`);
+    process.stderr.write(`New version available: ${latest.currentVersion}\n`);
 
     process.stderr.write(`Fetching HTML content\n`);
     const html = await fetchLatest();

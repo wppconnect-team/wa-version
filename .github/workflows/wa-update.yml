@@ -1,15 +1,11 @@
-name: build
+name: wa-update
 
 on:
-  push:
-    branches:
-      - '*'
-  pull_request:
-    branches:
-      - '*'
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
-  build:
+  wa-update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
