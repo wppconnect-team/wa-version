@@ -1,0 +1,61 @@
+{
+  "name": "@wppconnect/wa-version",
+  "version": "0.1.0",
+  "description": "List of WhatsApp Web HTML",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Edgard Messias",
+    "email": "edgardmessias@gmail.com",
+    "url": "https://github.com/edgardmessias"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build:dev": "tsc --sourceMap",
+    "build": "tsc",
+    "changelog:last": "conventional-changelog -p angular -r 2",
+    "changelog:preview": "conventional-changelog -p angular -u",
+    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "clean": "shx rm -rf session dist",
+    "commit": "cz",
+    "license:add": "license-check-and-add add",
+    "license:check": "license-check-and-add check",
+    "lint": "npx eslint --ext .ts src",
+    "prepare": "husky install && npm run clean && npm run build",
+    "release": "release-it",
+    "wa-update": "ts-node ./src/tools/update.ts",
+    "watch": "tsc -w --sourceMap"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cz-commitlint": "^12.1.4",
+    "@types/node": "^14.14.22",
+    "@types/node-fetch": "^2.5.11",
+    "@types/semver": "^7.3.7",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "commitizen": "^4.2.3",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^7.0.0",
+    "license-check-and-add": "^4.0.2",
+    "prettier": "^2.3.0",
+    "pretty-quick": "^3.1.0",
+    "release-it": "^14.4.1",
+    "shx": "^0.3.3",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
