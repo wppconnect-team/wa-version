@@ -1,4 +1,4 @@
-/*
+/*!
  * Copyright 2021 WPPConnect Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,11 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// license end
 import fetch from 'node-fetch';
 import { WA_CHECK_UPDATE_URL } from './constants';
 import { getLatestVersion } from './getLatestVersion';
 
 export interface WaVersionInfo {
+  //Teste
   isBroken: boolean;
   /**
    * Caso true, a versão é desatualizada, mas ainda funciona com funcionalidades reduzidas

@@ -11,8 +11,8 @@
   "license": "LICENSE.header",
   "licenseFormats": {
     "js|ts": {
-      "prepend": "/*",
-      "append": " */",
+      "prepend": "/*!",
+      "append": " */\n// license end",
       "eachLine": {
         "prepend": " * "
       }

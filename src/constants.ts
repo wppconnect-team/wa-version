@@ -1,4 +1,4 @@
-/*
+/*!
  * Copyright 2021 WPPConnect Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+// license end
 import * as path from 'path';
 
 export const WA_URL = 'https://web.whatsapp.com/';
