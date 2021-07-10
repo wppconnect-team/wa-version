@@ -42,15 +42,29 @@ jobs:
         env:
           WA_COMMIT: true
 
-      - name: Output 1
+      - name: Discord Notification (Outdated)
+        uses: sarisia/actions-status-discord@v1
+        if: ${{ steps.update.outputs.hasOutdated == 'true' }}
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          nodetail: true
+          color: 0xCB2431
+          title: Versões sem mais suporte
+          description: |
+            Algumas versões do WhatsApp foram desativadas, assim não funcionando mais.
+            Versões sem Suporte: `${{ join(fromJSON(steps.update.outputs.outdated), '`, `') }}`
+
+      - name: Discord Notification (New)
+        uses: sarisia/actions-status-discord@v1
         if: ${{ steps.update.outputs.hasNewVersion == 'true' }}
-        run: echo ${{ steps.update.outputs.hasNewVersion }}
-
-      - name: Output 2
-        run: echo ${{ steps.update.outputs.version }}
-
-      - name: Output 3
-        run: echo ${{ steps.update.outputs.outdated }}
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          nodetail: true
+          color: 0x28A745
+          title: Nova versão do WhatsApp WEB!
+          description: |
+            Acabou de sair uma nova versão do WhatsApp WEB.
+            Número da Versão: `${{ fromJSON(steps.update.outputs.version) }}`
 
       - name: LOG
         run: git log -n 10
