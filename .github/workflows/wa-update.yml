@@ -2,7 +2,7 @@ name: wa-update
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 * * * *'
 
 jobs:
   wa-update:
@@ -66,8 +66,6 @@ jobs:
             Acabou de sair uma nova versão do WhatsApp WEB.
             Número da Versão: `${{ fromJSON(steps.update.outputs.version) }}`
 
-      - name: LOG
-        run: git log -n 10
-
-      - name: PUSH
-        run: git push
+      - name: Release
+        if: ${{ steps.update.outputs.hasChanges == 'true' }}
+        run: npm run release -- --ci -i minor
