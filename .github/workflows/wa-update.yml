@@ -2,7 +2,7 @@ name: wa-update
 
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '* * * * *'
 
 jobs:
   wa-update:
@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Checkout
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -34,12 +39,21 @@ jobs:
       - name: Check Updates
         id: update
         run: npm run wa-update
+        env:
+          WA_COMMIT: true
 
       - name: Output 1
-        run: echo ${{ steps.update.outputs.new }}
+        if: ${{ steps.update.outputs.hasNewVersion == 'true' }}
+        run: echo ${{ steps.update.outputs.hasNewVersion }}
 
       - name: Output 2
         run: echo ${{ steps.update.outputs.version }}
 
       - name: Output 3
         run: echo ${{ steps.update.outputs.outdated }}
+
+      - name: LOG
+        run: git log -n 10
+
+      - name: PUSH
+        run: git push

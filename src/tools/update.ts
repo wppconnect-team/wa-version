@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import execa from 'execa';
 import * as fs from 'fs';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
@@ -28,6 +29,15 @@ const isCI =
   (typeof process.env.CI !== 'string' ||
     process.env.CI.toLowerCase() !== 'false');
 
+const runCommit =
+  process.env.WA_COMMIT &&
+  (typeof process.env.WA_COMMIT !== 'string' ||
+    process.env.WA_COMMIT.toLowerCase() !== 'false');
+
+function getVersionPath(version: string) {
+  return path.join(HTML_DIR, `${version}.html`);
+}
+
 /**
  * Verifica todas versões atualizadas e se possuí alguma que não funciona mais
  * @returns Quantidade de versões desatualizadas
@@ -35,7 +45,7 @@ const isCI =
 async function checkActiveVersions() {
   const versions = getAvailableVersions();
 
-  let outdated = 0;
+  const outdated: string[] = [];
   for (const version of versions) {
     process.stderr.write(`Cheking update of ${version} - `);
     const latest = await checkUpdate(version);
@@ -45,8 +55,8 @@ async function checkActiveVersions() {
     }
 
     process.stderr.write(`outdated\n`);
-    await fs.promises.unlink(path.join(HTML_DIR, `${version}.html`));
-    outdated++;
+    // await fs.promises.unlink(getVersionPath(version));
+    outdated.push(version);
   }
   return outdated;
 }
@@ -64,11 +74,9 @@ async function updateLatest() {
     process.stderr.write(`Fetching HTML content\n`);
     const html = await fetchLatest();
     process.stderr.write(`Generating new file\n`);
-    await fs.promises.writeFile(
-      path.join(HTML_DIR, `${latest.currentVersion}.html`),
-      html,
-      { encoding: 'utf8' }
-    );
+    await fs.promises.writeFile(getVersionPath(latest.currentVersion), html, {
+      encoding: 'utf8',
+    });
     process.stderr.write(`Done\n`);
     return latest.currentVersion;
   }
@@ -81,11 +89,41 @@ async function updateLatest() {
 async function run() {
   const outdated = await checkActiveVersions();
   const newVersion = await updateLatest();
+  const hasChanges = !!newVersion || !!outdated.length;
 
   if (isCI) {
-    console.log(`::set-output name=new::${JSON.stringify(!!newVersion)}`);
-    console.log(`::set-output name=version::${JSON.stringify(newVersion)}`);
+    console.log(
+      `::set-output name=hasOutdated::${JSON.stringify(outdated.length > 0)}`
+    );
     console.log(`::set-output name=outdated::${JSON.stringify(outdated)}`);
+    console.log(
+      `::set-output name=hasNewVersion::${JSON.stringify(!!newVersion)}`
+    );
+    console.log(`::set-output name=version::${JSON.stringify(newVersion)}`);
+    console.log(`::set-output name=hasChanges::${JSON.stringify(hasChanges)}`);
+
+    if (runCommit) {
+      for (const version of outdated) {
+        await execa('git', ['rm', getVersionPath(version)]);
+        const { stdout } = await execa('git', [
+          'commit',
+          '-m',
+          `fix: Removido versão desatualizada: ${version}`,
+          getVersionPath(version),
+        ]);
+        process.stderr.write(`${stdout}\n`);
+      }
+      if (newVersion) {
+        await execa('git', ['add', getVersionPath(newVersion)]);
+        const { stdout } = await execa('git', [
+          'commit',
+          '-m',
+          `fix: Adicionado nova versão: ${newVersion}`,
+          getVersionPath(newVersion),
+        ]);
+        process.stderr.write(`${stdout}\n`);
+      }
+    }
   }
 }
 run();
