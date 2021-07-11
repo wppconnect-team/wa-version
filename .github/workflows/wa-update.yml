@@ -68,4 +68,4 @@ jobs:
 
       - name: Release
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
-        run: npm run release -- --ci -i minor
+        run: npm run release -- --ci -i patch
