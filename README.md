@@ -2,10 +2,10 @@
 
 [![npm version](https://img.shields.io/npm/v/@wppconnect/wa-version.svg?color=green)](https://www.npmjs.com/package/@wppconnect/wa-version)
 [![Downloads](https://img.shields.io/npm/dm/@wppconnect/wa-version.svg)](https://www.npmjs.com/package/@wppconnect/wa-version)
-[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/wppconnect/wa-version.svg)](https://isitmaintained.com/project/wppconnect/wa-version 'Average time to resolve an issue')
-[![Percentage of issues still open](https://isitmaintained.com/badge/open/wppconnect/wa-version.svg)](https://isitmaintained.com/project/wppconnect/wa-version 'Percentage of issues still open')
-[![Build Status](https://img.shields.io/github/workflow/status/wppconnect/wa-version/build.svg)](https://github.com/wppconnect/wa-version/actions)
-[![Lint Status](https://img.shields.io/github/workflow/status/wppconnect/wa-version/lint.svg?label=lint)](https://github.com/wppconnect/wa-version/actions)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/wppconnect-team/wa-version.svg)](https://isitmaintained.com/project/wppconnect/wa-version 'Average time to resolve an issue')
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/wppconnect-team/wa-version.svg)](https://isitmaintained.com/project/wppconnect/wa-version 'Percentage of issues still open')
+[![Build Status](https://img.shields.io/github/workflow/status/wppconnect-team/wa-version/build.svg)](https://github.com/wppconnect/wa-version/actions)
+[![Lint Status](https://img.shields.io/github/workflow/status/wppconnect-team/wa-version/lint.svg?label=lint)](https://github.com/wppconnect/wa-version/actions)
 [![release-it](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-release--it-e10079.svg)](https://github.com/release-it/release-it)
 
 > WPPConnect/WA-Version é um projeto open source com o intuito de ajudar ferramentas de automatização de navegação do WhatsApp Web, fazendo que seja possível acessar versões mais antigas das páginas, assim dando um tempo maior para adaptar as atualizações
