@@ -25,8 +25,11 @@ export async function fetchLatest(): Promise<string> {
   const response = await fetch(WA_URL, {
     headers: {
       'user-agent': WA_USER_AGENT,
-      'Accept-Language': 'en-US,en;q=0.9',
+      'accept-language': 'en-US,en;q=1',
       'sec-fetch-mode': 'navigate',
+      cookie: 'wa_lang_pref=en',
+      pragma: 'no-cache',
+      'cache-control': 'no-cache',
     },
   });
 

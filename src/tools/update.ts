@@ -69,17 +69,33 @@ async function checkActiveVersions() {
 async function updateLatest() {
   process.stderr.write(`Cheking latest update\n`);
   const latest = await checkUpdate();
-  if (!latest.isUpdated) {
-    process.stderr.write(`New version available: ${latest.currentVersion}\n`);
 
-    process.stderr.write(`Fetching HTML content\n`);
-    const html = await fetchLatest();
+  process.stderr.write(`Fetching HTML content\n`);
+  const html = await fetchLatest();
+
+  let version = null;
+
+  if (!latest.isUpdated) {
+    version = latest.currentVersion;
+  } else {
+    // Verifica atualização dentro da página do WhatsApp
+    const versionRE = /,\w+="(2\.\d+\.\d+)",/;
+    const matches = versionRE.exec(html);
+
+    if (matches) {
+      version = matches[1];
+    }
+  }
+
+  if (version) {
+    process.stderr.write(`New version available: ${version}\n`);
+
     process.stderr.write(`Generating new file\n`);
-    await fs.promises.writeFile(getVersionPath(latest.currentVersion), html, {
+    await fs.promises.writeFile(getVersionPath(version), html, {
       encoding: 'utf8',
     });
     process.stderr.write(`Done\n`);
-    return latest.currentVersion;
+    return version;
   }
 
   process.stderr.write(`is updated\n`);
