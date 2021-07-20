@@ -15,12 +15,14 @@
  */
 // license end
 import execa from 'execa';
+import semver from 'semver';
 import * as fs from 'fs';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR } from '../constants';
 import { fetchLatest } from '../fetchLatest';
 import { getAvailableVersions } from '../getAvailableVersions';
+import { getLatestVersion } from '../getLatestVersion';
 
 /**
  * Verifica se está sendo executando pelo GitHub actions
@@ -87,7 +89,7 @@ async function updateLatest() {
     }
   }
 
-  if (version) {
+  if (version && semver.gt(version, getLatestVersion())) {
     process.stderr.write(`New version available: ${version}\n`);
 
     process.stderr.write(`Generating new file\n`);

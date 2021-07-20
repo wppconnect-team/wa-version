@@ -15,6 +15,7 @@
  */
 // license end
 import fetch from 'node-fetch';
+import semver from 'semver';
 import { WA_CHECK_UPDATE_URL } from './constants';
 import { getLatestVersion } from './getLatestVersion';
 
@@ -60,7 +61,7 @@ export async function checkUpdate(version?: string): Promise<WaVersionInfo> {
   const response = await fetch(url);
   const data = await response.json();
 
-  data.isUpdated = data.currentVersion === version;
+  data.isUpdated = semver.lte(data.currentVersion, version);
   data.yourVersion = version;
 
   return data;
