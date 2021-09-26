@@ -13,3 +13,9 @@ updates:
       - dependency-name: '@types/node'
         versions:
           - '>= 15.a'
+      - dependency-name: '@types/node-fetch'
+        versions:
+          - '>= 3.a'
+      - dependency-name: 'node-fetch'
+        versions:
+          - '>= 3.a'
