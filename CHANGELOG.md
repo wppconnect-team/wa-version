@@ -1,3 +1,24 @@
+## 1.1.19 (2021-11-01)
+
+
+### Bug Fixes
+
+* Removido versão desatualizada: 2.2117.5 ([a272ad6](https://github.com/wppconnect-team/wa-version/commit/a272ad67db5c980ee7cb91eb05d10817e0e4a85c))
+* Removido versão desatualizada: 2.2119.6 ([262fe17](https://github.com/wppconnect-team/wa-version/commit/262fe1779b261999d5f940531b9a80007077556c))
+* Removido versão desatualizada: 2.2121.5 ([f72f4d8](https://github.com/wppconnect-team/wa-version/commit/f72f4d8bc31d71eb122096fdaed6deb45cda13dd))
+* Removido versão desatualizada: 2.2121.6 ([ddf58ff](https://github.com/wppconnect-team/wa-version/commit/ddf58ff6b08a1b4b72a6b8044b82f2012a05b5ea))
+* Removido versão desatualizada: 2.2123.7 ([7327223](https://github.com/wppconnect-team/wa-version/commit/732722322fa0639b2cdb209fba6fc6a47753b144))
+* Removido versão desatualizada: 2.2123.8 ([e9c0999](https://github.com/wppconnect-team/wa-version/commit/e9c0999da5dd355345d750862860d467317cd407))
+* Removido versão desatualizada: 2.2126.10 ([b09dbf5](https://github.com/wppconnect-team/wa-version/commit/b09dbf5d3828675fb10a0882dee207d4213f52cd))
+* Removido versão desatualizada: 2.2126.11 ([c13aa10](https://github.com/wppconnect-team/wa-version/commit/c13aa102d9199ac8e2a85fb6fc0152a7b353fe50))
+* Removido versão desatualizada: 2.2126.12 ([ef0417b](https://github.com/wppconnect-team/wa-version/commit/ef0417b540990fd34d068308273a82d4e69df84c))
+* Removido versão desatualizada: 2.2126.14 ([038467b](https://github.com/wppconnect-team/wa-version/commit/038467bd9d268ffd246afd9f3530f15fd5a3d854))
+* Removido versão desatualizada: 2.2130.7 ([bd53bbe](https://github.com/wppconnect-team/wa-version/commit/bd53bbeaa6c593b9714e987e88bbbcbf75c1779b))
+* Removido versão desatualizada: 2.2130.8 ([2b9feac](https://github.com/wppconnect-team/wa-version/commit/2b9feacbd1bc6f3f117c45ec9df2be4a646ab420))
+* Removido versão desatualizada: 2.2130.9 ([bd34fbd](https://github.com/wppconnect-team/wa-version/commit/bd34fbd5854fed85c3c59dd4963b528f9ad3741d))
+
+
+
 ## 1.1.18 (2021-10-30)
 
 
