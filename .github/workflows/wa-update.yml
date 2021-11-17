@@ -1,6 +1,12 @@
 name: wa-update
 
 on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
   schedule:
     - cron: '0 * * * *'
 

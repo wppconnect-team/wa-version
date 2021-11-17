@@ -18,6 +18,9 @@ updates:
       - dependency-name: '@types/node-fetch'
         versions:
           - '>= 3.a'
+      - dependency-name: 'execa'
+        versions:
+          - '>= 6.a'
       - dependency-name: 'node-fetch'
         versions:
           - '>= 3.a'

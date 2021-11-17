@@ -44,7 +44,7 @@
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "execa": "^6.0.0",
+    "execa": "~5.1",
     "husky": "^7.0.4",
     "license-check-and-add": "^4.0.3",
     "prettier": "^2.3.0",
