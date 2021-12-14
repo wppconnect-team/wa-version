@@ -1,3 +1,12 @@
+## 1.1.26 (2021-12-14)
+
+
+### Bug Fixes
+
+* Adicionado nova versão: 2.2147.16 ([9bbc61b](https://github.com/wppconnect-team/wa-version/commit/9bbc61be087eb2dae2ea5ed3fd40d0bdc798579b))
+
+
+
 ## 1.1.25 (2021-12-11)
 
 
