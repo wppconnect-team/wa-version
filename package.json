@@ -52,7 +52,7 @@
     "release-it": "^14.12.3",
     "shx": "^0.3.4",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   },
   "config": {
     "commitizen": {
