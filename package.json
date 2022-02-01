@@ -38,7 +38,7 @@
     "@types/node-fetch": "^2.5.11",
     "@types/semver": "^7.3.9",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.2",
     "commitizen": "^4.2.3",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.8.0",
