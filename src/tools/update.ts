@@ -21,6 +21,7 @@ import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR } from '../constants';
 import { fetchLatest } from '../fetchLatest';
+import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
 import { getLatestVersion } from '../getLatestVersion';
 
@@ -69,35 +70,33 @@ async function checkActiveVersions() {
  * @returns Nova versão caso tiver sido atualizado, null constrário
  */
 async function updateLatest() {
-  process.stderr.write(`Cheking latest update\n`);
-  const latest = await checkUpdate();
-
   process.stderr.write(`Fetching HTML content\n`);
-  const html = await fetchLatest();
 
-  let version = null;
+  const functions = [fetchLatest, fetchLatestBeta];
 
-  if (!latest.isUpdated) {
-    version = latest.currentVersion;
-  } else {
-    // Verifica atualização dentro da página do WhatsApp
-    const versionRE = /,\w+="(2\.\d+\.\d+)",/;
+  for (const func of functions) {
+    const html = await func();
+
+    let version = null;
+
+    // Get the version inside of WhatsApp page
+    const versionRE = /\w+="(2\.\d+\.\d+)"|manifest-(2\.\d+\.\d+)\.json/;
     const matches = versionRE.exec(html);
 
     if (matches) {
-      version = matches[1];
+      version = matches.slice(1).find((m) => !!m);
     }
-  }
 
-  if (version && semver.gt(version, getLatestVersion())) {
-    process.stderr.write(`New version available: ${version}\n`);
+    if (version && semver.gt(version, getLatestVersion())) {
+      process.stderr.write(`New version available: ${version}\n`);
 
-    process.stderr.write(`Generating new file\n`);
-    await fs.promises.writeFile(getVersionPath(version), html, {
-      encoding: 'utf8',
-    });
-    process.stderr.write(`Done\n`);
-    return version;
+      process.stderr.write(`Generating new file\n`);
+      await fs.promises.writeFile(getVersionPath(version), html, {
+        encoding: 'utf8',
+      });
+      process.stderr.write(`Done\n`);
+      return version;
+    }
   }
 
   process.stderr.write(`is updated\n`);

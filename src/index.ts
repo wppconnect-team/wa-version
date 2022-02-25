@@ -17,6 +17,7 @@
 export * from './checkUpdate';
 export * as constants from './constants';
 export * from './fetchLatest';
+export * from './fetchLatestBeta';
 export * from './getAvailableVersions';
 export * from './getLatestVersion';
 export * from './getPageContent';
