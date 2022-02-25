@@ -24,9 +24,10 @@ import { fetchLatest } from '../fetchLatest';
 import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
 import { getLatestVersion } from '../getLatestVersion';
+import { getPageContent } from '../getPageContent';
 
 /**
- * Verifica se está sendo executando pelo GitHub actions
+ * Checks if it is executed by GitHub actions
  */
 const isCI =
   process.env.CI &&
@@ -43,8 +44,8 @@ function getVersionPath(version: string) {
 }
 
 /**
- * Verifica todas versões atualizadas e se possuí alguma que não funciona mais
- * @returns Quantidade de versões desatualizadas
+ * Check all updated versions and return that no longer work
+ * @returns List of outdated versions
  */
 async function checkActiveVersions() {
   const versions = getAvailableVersions();
@@ -53,21 +54,35 @@ async function checkActiveVersions() {
   for (const version of versions) {
     process.stderr.write(`Cheking update of ${version} - `);
     const latest = await checkUpdate(version);
-    if (!latest.isBelowHard) {
-      process.stderr.write(`OK\n`);
+    if (latest.isBelowHard) {
+      process.stderr.write(`outdated\n`);
+      outdated.push(version);
       continue;
     }
 
-    process.stderr.write(`outdated\n`);
-    // await fs.promises.unlink(getVersionPath(version));
-    outdated.push(version);
+    const content = getPageContent(version);
+
+    const matches = content.match(/"hard_expire_time"\s+data-time="([\d.]+)"/);
+
+    if (matches) {
+      const hardExpire = parseFloat(matches[1]) * 1000;
+
+      if (hardExpire < Date.now()) {
+        process.stderr.write(`outdated\n`);
+        outdated.push(version);
+        continue;
+      }
+    }
+
+    process.stderr.write(`OK\n`);
+    continue;
   }
   return outdated;
 }
 
 /**
- * Verifica e atualiza a última versão do whatsapp
- * @returns Nova versão caso tiver sido atualizado, null constrário
+ * Check and update the latest version of whatsapp
+ * @returns New version if it has been updated, otherwise null
  */
 async function updateLatest() {
   process.stderr.write(`Fetching HTML content\n`);
@@ -126,7 +141,7 @@ async function run() {
         const { stdout } = await execa('git', [
           'commit',
           '-m',
-          `fix: Removido versão desatualizada: ${version}`,
+          `fix: Removed outdated version: ${version}`,
           getVersionPath(version),
         ]);
         process.stderr.write(`${stdout}\n`);
@@ -136,7 +151,7 @@ async function run() {
         const { stdout } = await execa('git', [
           'commit',
           '-m',
-          `fix: Adicionado nova versão: ${newVersion}`,
+          `fix: Added new version: ${newVersion}`,
           getVersionPath(newVersion),
         ]);
         process.stderr.write(`${stdout}\n`);
