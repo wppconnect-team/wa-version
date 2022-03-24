@@ -87,6 +87,8 @@ async function checkActiveVersions() {
 async function updateLatest() {
   process.stderr.write(`Fetching HTML content\n`);
 
+  const versions = getAvailableVersions();
+
   const functions = [fetchLatest, fetchLatestBeta];
 
   for (const func of functions) {
@@ -102,7 +104,7 @@ async function updateLatest() {
       version = matches.slice(1).find((m) => !!m);
     }
 
-    if (version && semver.gt(version, getLatestVersion())) {
+    if (version && !versions.includes(version)) {
       process.stderr.write(`New version available: ${version}\n`);
 
       process.stderr.write(`Generating new file\n`);
