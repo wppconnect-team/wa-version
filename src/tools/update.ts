@@ -15,7 +15,6 @@
  */
 // license end
 import execa from 'execa';
-import semver from 'semver';
 import * as fs from 'fs';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
@@ -23,7 +22,6 @@ import { HTML_DIR } from '../constants';
 import { fetchLatest } from '../fetchLatest';
 import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
-import { getLatestVersion } from '../getLatestVersion';
 import { getPageContent } from '../getPageContent';
 
 /**
@@ -53,7 +51,7 @@ async function checkActiveVersions() {
   const outdated: string[] = [];
   for (const version of versions) {
     process.stderr.write(`Cheking update of ${version} - `);
-    const latest = await checkUpdate(version);
+    const latest = await checkUpdate(version.replace('-beta', ''));
     if (latest.isBelowHard) {
       process.stderr.write(`outdated\n`);
       outdated.push(version);
@@ -102,6 +100,12 @@ async function updateLatest() {
 
     if (matches) {
       version = matches.slice(1).find((m) => !!m);
+
+      // Check is beta
+      const isBetaRE = /x-wa-beta="1"/;
+      if (isBetaRE.test(html)) {
+        version += '-beta';
+      }
     }
 
     if (version && !versions.includes(version)) {
