@@ -26,14 +26,19 @@ import { getLatestVersion } from './getLatestVersion';
  * @param versionMatch Versão da página para retornar
  * @returns Conteúdo HTML da página
  */
-export function getPageContent(versionMatch?: string | semver.Range): string {
+export function getPageContent(
+  versionMatch?: string | semver.Range,
+  includePrerelease = true
+): string {
   if (!versionMatch) {
     versionMatch = getLatestVersion();
   }
 
   const versions = getAvailableVersions();
 
-  const max = semver.maxSatisfying(versions, versionMatch);
+  const max = semver.maxSatisfying(versions, versionMatch, {
+    includePrerelease,
+  });
 
   if (!max) {
     throw new Error(`Version not available for ${versionMatch}`);
