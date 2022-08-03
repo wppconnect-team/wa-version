@@ -57,10 +57,10 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
           color: 0xCB2431
-          title: Versões sem mais suporte
+          title: Outdated WhatsApp WEB versions
           description: |
-            Algumas versões do WhatsApp foram desativadas, assim não funcionando mais.
-            Versões sem Suporte: `${{ join(fromJSON(steps.update.outputs.outdated), '`, `') }}`
+            Some versions of WhatsApp WEB doesn't work anymore.
+            Outdated versions: `${{ join(fromJSON(steps.update.outputs.outdated), '`, `') }}`
 
       - name: Discord Notification (New)
         uses: sarisia/actions-status-discord@v1
@@ -69,10 +69,10 @@ jobs:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
           color: 0x28A745
-          title: Nova versão do WhatsApp WEB!
+          title: New version for WhatsApp WEB!
           description: |
-            Acabou de sair uma nova versão do WhatsApp WEB.
-            Número da Versão: `${{ fromJSON(steps.update.outputs.version) }}`
+            A new version of WhatsApp WEB has just been released.
+            Version Number: `${{ fromJSON(steps.update.outputs.version) }}`
 
       - name: Release
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
