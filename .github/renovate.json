@@ -42,12 +42,12 @@
     {
       "description": "Ignore major version",
       "matchPackageNames": ["@types/node-fetch", "node-fetch"],
-      "allowedVersions": "<4"
+      "allowedVersions": "<3"
     },
     {
       "description": "Ignore major version",
       "matchPackageNames": ["execa"],
-      "allowedVersions": "<7"
+      "allowedVersions": "<6"
     }
   ]
 }
