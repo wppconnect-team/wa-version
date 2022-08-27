@@ -1,3 +1,12 @@
+## 1.1.137 (2022-08-27)
+
+
+### Bug Fixes
+
+* Removed outdated version: 2.2206.6 ([5704110](https://github.com/wppconnect-team/wa-version/commit/5704110e8659171931734fbbaa62ecfec067d718))
+
+
+
 ## 1.1.136 (2022-08-26)
 
 
