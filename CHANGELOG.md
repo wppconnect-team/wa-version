@@ -1,3 +1,12 @@
+## [1.1.153](https://github.com/wppconnect-team/wa-version/compare/v1.1.152...v1.1.153) (2022-09-15)
+
+
+### Bug Fixes
+
+* Added new version: 2.2234.13-beta ([bd15887](https://github.com/wppconnect-team/wa-version/commit/bd1588794e781ac250975348bd3b59c1dba35ade))
+
+
+
 ## 1.1.152 (2022-09-15)
 
 
