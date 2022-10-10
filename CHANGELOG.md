@@ -1,3 +1,13 @@
+## 1.1.169 (2022-10-10)
+
+
+### Bug Fixes
+
+* Removed outdated version: 2.2212.7 ([972347d](https://github.com/wppconnect-team/wa-version/commit/972347d795780590c4abff5d3284fd9c2a86f350))
+* Removed outdated version: 2.2212.7-beta ([cf19e57](https://github.com/wppconnect-team/wa-version/commit/cf19e578c265d6d5da3952118760201b1ee02bb9))
+
+
+
 ## 1.1.168 (2022-10-04)
 
 
