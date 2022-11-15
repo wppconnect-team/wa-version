@@ -50,6 +50,14 @@ jobs:
         env:
           WA_COMMIT: true
 
+      - name: Remove untracked files
+        if: ${{ steps.update.outputs.hasChanges == 'true' }}
+        run: git clean -f
+
+      - name: Release
+        if: ${{ steps.update.outputs.hasChanges == 'true' }}
+        run: npm run release -- --ci -i patch
+
       - name: Discord Notification (Outdated)
         uses: sarisia/actions-status-discord@v1
         if: ${{ steps.update.outputs.hasOutdated == 'true' }}
@@ -73,11 +81,3 @@ jobs:
           description: |
             A new version of WhatsApp WEB has just been released.
             Version Number: `${{ fromJSON(steps.update.outputs.version) }}`
-
-      - name: Remove untracked files
-        if: ${{ steps.update.outputs.hasChanges == 'true' }}
-        run: git clean -f
-
-      - name: Release
-        if: ${{ steps.update.outputs.hasChanges == 'true' }}
-        run: npm run release -- --ci -i patch
