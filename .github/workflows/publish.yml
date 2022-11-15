@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
       - name: Get npm cache directory
         id: npm-cache
         run: |
-          echo "::set-output name=dir::$(npm config get cache)"
+          echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
       - name: Setup npm cache
         uses: actions/cache@v3
         with:
@@ -55,7 +55,7 @@ jobs:
           changelog="${changelog//$'\n'/'%0A'}"
           changelog="${changelog//$'\r'/'%0D'}" 
           echo -e "set-output name=changelog::${changelog-<empty>}\n"
-          echo -e "::set-output name=changelog::${changelog}\n"
+          echo "changelog=${changelog}" >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
