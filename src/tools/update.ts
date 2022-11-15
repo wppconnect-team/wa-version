@@ -16,6 +16,7 @@
 // license end
 import execa from 'execa';
 import * as fs from 'fs';
+import * as os from 'os';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR } from '../constants';
@@ -39,6 +40,18 @@ const runCommit =
 
 function getVersionPath(version: string) {
   return path.join(HTML_DIR, `${version}.html`);
+}
+
+function setGitHubState(key: string, value: any) {
+  const jsonValue = JSON.stringify(value);
+
+  if (!process.env.GITHUB_OUTPUT) {
+    console.log(`set-output name=${key}::${jsonValue}`);
+    return;
+  }
+  fs.appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${jsonValue}${os.EOL}`, {
+    encoding: 'utf8',
+  });
 }
 
 /**
@@ -92,14 +105,14 @@ async function updateLatest() {
   for (const func of functions) {
     const html = await func();
 
-    let version = null;
+    let version: string | null = null;
 
     // Get the version inside of WhatsApp page
     const versionRE = /\w+="(2\.\d+\.\d+)"|manifest-(2\.\d+\.\d+)\.json/;
     const matches = versionRE.exec(html);
 
     if (matches) {
-      version = matches.slice(1).find((m) => !!m);
+      version = matches.slice(1).find((m) => !!m) || null;
 
       // Check is beta
       const isBetaRE = /x-wa-beta="1"/;
@@ -131,15 +144,11 @@ async function run() {
   const hasChanges = !!newVersion || !!outdated.length;
 
   if (isCI) {
-    console.log(
-      `::set-output name=hasOutdated::${JSON.stringify(outdated.length > 0)}`
-    );
-    console.log(`::set-output name=outdated::${JSON.stringify(outdated)}`);
-    console.log(
-      `::set-output name=hasNewVersion::${JSON.stringify(!!newVersion)}`
-    );
-    console.log(`::set-output name=version::${JSON.stringify(newVersion)}`);
-    console.log(`::set-output name=hasChanges::${JSON.stringify(hasChanges)}`);
+    setGitHubState('hasOutdated', outdated.length > 0);
+    setGitHubState('outdated', outdated);
+    setGitHubState('hasNewVersion', !!newVersion);
+    setGitHubState('version', newVersion);
+    setGitHubState('hasChanges', hasChanges);
 
     if (runCommit) {
       for (const version of outdated) {
