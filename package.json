@@ -34,7 +34,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/cz-commitlint": "^17.3.0",
-    "@types/node": "^14.18.34",
+    "@types/node": "^14.18.35",
     "@types/node-fetch": "^2.6.2",
     "@types/semver": "^7.3.13",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
