@@ -42,7 +42,7 @@
     "commitizen": "^4.2.6",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "execa": "~5.1",
     "husky": "^8.0.2",
