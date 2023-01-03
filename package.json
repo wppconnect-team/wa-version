@@ -45,7 +45,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "execa": "~5.1",
-    "husky": "^8.0.2",
+    "husky": "^8.0.3",
     "license-check-and-add": "^4.0.5",
     "prettier": "^2.8.1",
     "pretty-quick": "^3.1.3",
