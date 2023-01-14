@@ -1,3 +1,13 @@
+## 1.1.225 (2023-01-14)
+
+
+### Bug Fixes
+
+* Removed outdated version: 2.2226.4 ([5f44a77](https://github.com/wppconnect-team/wa-version/commit/5f44a778c79e972c2654f79e447e2f5aed5b1caa))
+* Removed outdated version: 2.2226.4-beta ([eff45b4](https://github.com/wppconnect-team/wa-version/commit/eff45b49aac93b6cf21b0e9b8252d3e5618473d5))
+
+
+
 ## 1.1.224 (2023-01-14)
 
 
