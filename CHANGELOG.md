@@ -1,3 +1,12 @@
+## 1.1.231 (2023-01-23)
+
+
+### Bug Fixes
+
+* Added new version: 2.2302.8 ([db32abb](https://github.com/wppconnect-team/wa-version/commit/db32abb2c9ba2ce038e79235d6fedc505914d03a))
+
+
+
 ## 1.1.230 (2023-01-20)
 
 
