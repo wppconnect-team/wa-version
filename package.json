@@ -27,7 +27,7 @@
     "watch": "tsc -w --sourceMap"
   },
   "dependencies": {
-    "node-fetch": "^2.6.8",
+    "node-fetch": "^2.6.9",
     "semver": "^7.3.8"
   },
   "devDependencies": {
