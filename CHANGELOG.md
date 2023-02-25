@@ -1,3 +1,12 @@
+# 1.2.0 (2023-02-25)
+
+
+### Features
+
+* Added getVersionInfo function ([1fb5c30](https://github.com/wppconnect-team/wa-version/commit/1fb5c3038ba38179bd15f045dca3343b504391a6))
+
+
+
 ## [1.1.260](https://github.com/wppconnect-team/wa-version/compare/v1.1.259...v1.1.260) (2023-02-24)
 
 
