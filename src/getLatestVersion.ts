@@ -14,14 +14,22 @@
  * limitations under the License.
  */
 
+import * as semver from 'semver';
 import { getAvailableVersions } from './getAvailableVersions';
 
 /**
  * Retorna a última versão disponível localmente
  * @returns Última versão
  */
-export function getLatestVersion(): string {
+export function getLatestVersion(
+  versionMatch: string | semver.Range = '*',
+  includePrerelease = true
+): string {
   const versions = getAvailableVersions();
 
-  return versions.pop() as string;
+  const max = semver.maxSatisfying(versions, versionMatch, {
+    includePrerelease,
+  });
+
+  return max || (versions.pop() as string);
 }

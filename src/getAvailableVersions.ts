@@ -25,7 +25,8 @@ import { HTML_DIR } from './constants';
  * @returns Lista de versões
  */
 export function getAvailableVersions(
-  versionMatch?: string | semver.Range
+  versionMatch?: string | semver.Range,
+  includePrerelease = true
 ): string[] {
   const versions = fs
     .readdirSync(HTML_DIR)
@@ -34,7 +35,9 @@ export function getAvailableVersions(
   const sorted = semver.sort(versions);
 
   if (versionMatch) {
-    return sorted.filter((v) => semver.satisfies(v, versionMatch));
+    return sorted.filter((v) =>
+      semver.satisfies(v, versionMatch, { includePrerelease })
+    );
   }
 
   return sorted;

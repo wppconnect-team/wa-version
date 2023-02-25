@@ -19,7 +19,9 @@ import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
-import { HTML_DIR } from '../constants';
+import { HTML_DIR, VERSIONS_FILE } from '../constants';
+import { fetchCurrentBetaVersion } from '../fetchCurrentBetaVersion';
+import { fetchCurrentVersion } from '../fetchCurrentVersion';
 import { fetchLatest } from '../fetchLatest';
 import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
@@ -138,10 +140,81 @@ async function updateLatest() {
   return null;
 }
 
+async function updateJsonFile() {
+  process.stderr.write(`Updating json file\n`);
+
+  const currentVersion = await fetchCurrentVersion();
+  const currentBeta = await fetchCurrentBetaVersion();
+
+  let json = await fs.promises.readFile(VERSIONS_FILE, {
+    encoding: 'utf8',
+  });
+
+  const content: {
+    currentVersion: string | null;
+    currentBeta: string | null;
+    versions: {
+      version: string;
+      beta: boolean;
+      released: string;
+      expire: string;
+    }[];
+  } = JSON.parse(json);
+
+  content.currentVersion = currentVersion;
+  content.currentBeta = currentBeta;
+
+  const versions = getAvailableVersions();
+
+  // Remove outdated versions
+  content.versions = content.versions.filter((v) =>
+    versions.includes(v.version)
+  );
+
+  const isBetaRE = /beta/;
+
+  for (const versionNumber of versions) {
+    if (content.versions.some((v) => v.version === versionNumber)) {
+      continue;
+    }
+
+    const released: Date = new Date();
+    let expire: Date = new Date();
+
+    const html = getPageContent(versionNumber);
+    const matches = html.match(/"hard_expire_time"\s+data-time="([\d.]+)"/);
+
+    if (matches) {
+      const timestamp = parseFloat(matches[1]) * 1000;
+
+      expire = new Date(timestamp);
+    }
+
+    content.versions.push({
+      version: versionNumber,
+      beta: isBetaRE.test(versionNumber),
+      released: released.toISOString(),
+      expire: expire.toISOString(),
+    });
+  }
+
+  json = JSON.stringify(content, null, 2);
+
+  await fs.promises.writeFile(VERSIONS_FILE, json, {
+    encoding: 'utf8',
+  });
+
+  process.stderr.write(`json file updated\n`);
+
+  return null;
+}
+
 async function run() {
   const outdated = await checkActiveVersions();
   const newVersion = await updateLatest();
   const hasChanges = !!newVersion || !!outdated.length;
+
+  updateJsonFile();
 
   if (isCI) {
     setGitHubState('hasOutdated', outdated.length > 0);
@@ -161,6 +234,17 @@ async function run() {
         ]);
         process.stderr.write(`${stdout}\n`);
       }
+
+      if (!newVersion && outdated.length > 0) {
+        const { stdout } = await execa('git', [
+          'commit',
+          '-m',
+          `chore: Updated versions.json ${newVersion}`,
+          'versions.json',
+        ]);
+        process.stderr.write(`${stdout}\n`);
+      }
+
       if (newVersion) {
         await execa('git', ['add', getVersionPath(newVersion)]);
         const { stdout } = await execa('git', [
@@ -168,6 +252,7 @@ async function run() {
           '-m',
           `fix: Added new version: ${newVersion}`,
           getVersionPath(newVersion),
+          'versions.json',
         ]);
         process.stderr.write(`${stdout}\n`);
       }

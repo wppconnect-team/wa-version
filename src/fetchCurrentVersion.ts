@@ -16,16 +16,13 @@
 
 import fetch from 'node-fetch';
 import { WA_URL, WA_USER_AGENT } from './constants';
-import { fetchCurrentBetaVersion } from './fetchCurrentBetaVersion';
 
 /**
- * Return the HTML content of currently beta version
- * @returns HTML content
+ * Return the current active noraml version on WhatsApp WEB
+ * @returns Version number
  */
-export async function fetchLatestBeta(): Promise<string> {
-  const version = await fetchCurrentBetaVersion();
-
-  const response = await fetch(`${WA_URL}?v=${version || ''}`, {
+export async function fetchCurrentVersion(): Promise<string | null> {
+  const responseSW = await fetch(`${WA_URL}serviceworker.js`, {
     headers: {
       'user-agent': WA_USER_AGENT,
       'accept-language': 'en-US,en;q=1',
@@ -36,5 +33,13 @@ export async function fetchLatestBeta(): Promise<string> {
     },
   });
 
-  return await response.text();
+  const textSW = await responseSW.text();
+
+  const matches = textSW.match(/wa([\d.]+)"/) || [];
+
+  if (matches[1]) {
+    return matches[1];
+  }
+
+  return null;
 }
