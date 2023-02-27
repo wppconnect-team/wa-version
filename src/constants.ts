@@ -26,4 +26,7 @@ export const WA_USER_AGENT =
 
 export const HTML_DIR = path.resolve(__dirname, '../html');
 
-export const VERSIONS_FILE = path.resolve(__dirname, '../versions.json');
+export const VERSIONS_FILE = path.join(
+  path.resolve(__dirname, '..'),
+  'versions.json'
+);

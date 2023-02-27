@@ -44,15 +44,22 @@ jobs:
       - name: Install Dependencies
         run: npm ci || npm install
 
+      - name: Fix husky
+        run: chmod ug+x .husky/pre-commit
+
       - name: Check Updates
         id: update
         run: npm run wa-update
         env:
           WA_COMMIT: true
 
+      - name: Git Status
+        if: ${{ steps.update.outputs.hasChanges == 'true' }}
+        run: git status
+
       - name: Remove untracked files
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
-        run: git clean -f
+        run: git clean -fd
 
       - name: Release
         if: ${{ steps.update.outputs.hasChanges == 'true' }}

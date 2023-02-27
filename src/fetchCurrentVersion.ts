@@ -35,11 +35,20 @@ export async function fetchCurrentVersion(): Promise<string | null> {
 
   const textSW = await responseSW.text();
 
-  const matches = textSW.match(/wa([\d.]+)"/) || [];
+  const matchesBeta = textSW.match(/wa([\d.]+)\.canary/) || [];
 
-  if (matches[1]) {
-    return matches[1];
-  }
+  const betaVersion = matchesBeta[1] || null;
+
+  const re = /(?:wa|version:")([\d.]+)"/g;
+
+  let matches: string[] | null = [];
+  do {
+    matches = re.exec(textSW);
+
+    if (matches !== null && matches[1] && matches[1] !== betaVersion) {
+      return matches[1];
+    }
+  } while (matches);
 
   return null;
 }

@@ -235,16 +235,6 @@ async function run() {
         process.stderr.write(`${stdout}\n`);
       }
 
-      if (!newVersion && outdated.length > 0) {
-        const { stdout } = await execa('git', [
-          'commit',
-          '-m',
-          `chore: Updated versions.json ${newVersion}`,
-          'versions.json',
-        ]);
-        process.stderr.write(`${stdout}\n`);
-      }
-
       if (newVersion) {
         await execa('git', ['add', getVersionPath(newVersion)]);
         const { stdout } = await execa('git', [
@@ -252,7 +242,17 @@ async function run() {
           '-m',
           `fix: Added new version: ${newVersion}`,
           getVersionPath(newVersion),
-          'versions.json',
+        ]);
+        process.stderr.write(`${stdout}\n`);
+      }
+
+      if (hasChanges) {
+        await execa('git', ['add', VERSIONS_FILE]);
+        const { stdout } = await execa('git', [
+          'commit',
+          '-a',
+          '-m',
+          `chore: Updated versions.json`,
         ]);
         process.stderr.write(`${stdout}\n`);
       }
