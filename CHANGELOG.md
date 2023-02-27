@@ -1,671 +1,483 @@
-# 1.2.0 (2023-02-25)
+## 1.2.1 (2023-02-27)
 
+### Bug Fixes
+
+- Added new version: 2.2310.4-beta ([65badfc](https://github.com/wppconnect-team/wa-version/commit/65badfcd7fb2a8276978b95c0880fe2fb579b1dc))
+- Fixed fetchCurrentVersion function ([add3427](https://github.com/wppconnect-team/wa-version/commit/add34274e4ef7b2b0c44092d2c8fd889b297c076))
+
+# 1.2.0 (2023-02-25)
 
 ### Features
 
-* Added getVersionInfo function ([1fb5c30](https://github.com/wppconnect-team/wa-version/commit/1fb5c3038ba38179bd15f045dca3343b504391a6))
-
-
+- Added getVersionInfo function ([1fb5c30](https://github.com/wppconnect-team/wa-version/commit/1fb5c3038ba38179bd15f045dca3343b504391a6))
 
 ## [1.1.260](https://github.com/wppconnect-team/wa-version/compare/v1.1.259...v1.1.260) (2023-02-24)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2308.7 ([3e17adf](https://github.com/wppconnect-team/wa-version/commit/3e17adfe624d1411d916cf2ac26dceafcb96c141))
-
-
+- Added new version: 2.2308.7 ([3e17adf](https://github.com/wppconnect-team/wa-version/commit/3e17adfe624d1411d916cf2ac26dceafcb96c141))
 
 ## [1.1.259](https://github.com/wppconnect-team/wa-version/compare/v1.1.258...v1.1.259) (2023-02-23)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2308.7-beta ([f5d653c](https://github.com/wppconnect-team/wa-version/commit/f5d653c7d4d3b947ae504e2b2406468bf40cd1c8))
-
-
+- Added new version: 2.2308.7-beta ([f5d653c](https://github.com/wppconnect-team/wa-version/commit/f5d653c7d4d3b947ae504e2b2406468bf40cd1c8))
 
 ## 1.1.258 (2023-02-21)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2308.6-beta ([d08b12c](https://github.com/wppconnect-team/wa-version/commit/d08b12c73d2d5c4625ff37e2e64068bce19e363a))
-
-
+- Added new version: 2.2308.6-beta ([d08b12c](https://github.com/wppconnect-team/wa-version/commit/d08b12c73d2d5c4625ff37e2e64068bce19e363a))
 
 ## [1.1.257](https://github.com/wppconnect-team/wa-version/compare/v1.1.256...v1.1.257) (2023-02-19)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2232.7 ([1c44b1a](https://github.com/wppconnect-team/wa-version/commit/1c44b1a07f0388d11cec91602947fdba76eef1f0))
-* Removed outdated version: 2.2232.7-beta ([0bd106b](https://github.com/wppconnect-team/wa-version/commit/0bd106b56c593547f2f35ce533f0684a2f63184e))
-* Removed outdated version: 2.2232.8 ([8f8d8e5](https://github.com/wppconnect-team/wa-version/commit/8f8d8e51c9f2655e3c330ba1bfde2d80853df685))
-* Removed outdated version: 2.2232.8-beta ([3fd9bec](https://github.com/wppconnect-team/wa-version/commit/3fd9becbc768677dd68274a8379e987c5945b5cc))
-* Removed outdated version: 2.2234.11-beta ([53e8dfb](https://github.com/wppconnect-team/wa-version/commit/53e8dfb4e4de72137812f2e6c73940276867806d))
-* Removed outdated version: 2.2234.12-beta ([74213f5](https://github.com/wppconnect-team/wa-version/commit/74213f5e1e805b119cc1312aa0556fb290f1f82d))
-* Removed outdated version: 2.2234.13 ([966250b](https://github.com/wppconnect-team/wa-version/commit/966250bddacbb5ff7a4c46e46738824b24d1d026))
-* Removed outdated version: 2.2234.13-beta ([829dcf4](https://github.com/wppconnect-team/wa-version/commit/829dcf47700eef4278d916241730e20fa519537d))
-* Removed outdated version: 2.2234.6-beta ([c3a8e64](https://github.com/wppconnect-team/wa-version/commit/c3a8e648e512d18778b1ba326ad8ee7929ed681f))
-* Removed outdated version: 2.2234.7-beta ([024fa54](https://github.com/wppconnect-team/wa-version/commit/024fa5444d36479217cf20b4141d57906a641f29))
-* Removed outdated version: 2.2234.8-beta ([31a1a42](https://github.com/wppconnect-team/wa-version/commit/31a1a42f905ff3bd6ae4acfaac01d2502ba423ed))
-* Removed outdated version: 2.2236.10 ([d9b9a6e](https://github.com/wppconnect-team/wa-version/commit/d9b9a6edca94af524c7fc9bd42cd68ca5a05fad0))
-* Removed outdated version: 2.2236.10-beta ([c09716b](https://github.com/wppconnect-team/wa-version/commit/c09716b14db816d6312f5ec61732166e604d08cb))
-* Removed outdated version: 2.2236.4-beta ([b596c62](https://github.com/wppconnect-team/wa-version/commit/b596c62785bc721487d01020d2c31389c0cbb122))
-* Removed outdated version: 2.2236.5-beta ([7554f66](https://github.com/wppconnect-team/wa-version/commit/7554f668891037bf53c77f1b155629736187619d))
-* Removed outdated version: 2.2236.6-beta ([c0258a7](https://github.com/wppconnect-team/wa-version/commit/c0258a7815a3c0e18787bd0e7b7bbd50b6148eee))
-* Removed outdated version: 2.2236.7-beta ([a6531ea](https://github.com/wppconnect-team/wa-version/commit/a6531eaa61c6af59a758edf1e28ac8f3d0a9a85b))
-* Removed outdated version: 2.2236.8-beta ([a08290a](https://github.com/wppconnect-team/wa-version/commit/a08290a15a7f63b42f6af264756c897cf1daf622))
-* Removed outdated version: 2.2238.5-beta ([303ec2d](https://github.com/wppconnect-team/wa-version/commit/303ec2d24e0c1bb3d49f4fa19eefa85313a78ef2))
-* Removed outdated version: 2.2238.6-beta ([2dc2cc2](https://github.com/wppconnect-team/wa-version/commit/2dc2cc2e32819881b037205a7851ddb8d32ca550))
-* Removed outdated version: 2.2238.7 ([4a6cffe](https://github.com/wppconnect-team/wa-version/commit/4a6cffed6a2140b7d01e6352e714f3df1ea615ea))
-* Removed outdated version: 2.2238.7-beta ([b61faa7](https://github.com/wppconnect-team/wa-version/commit/b61faa761ad9747f32f72f64e9885833386abfbf))
-* Removed outdated version: 2.2240.5-beta ([6aa232a](https://github.com/wppconnect-team/wa-version/commit/6aa232ada910d98a740c3e35525cd48942fb589c))
-* Removed outdated version: 2.2240.7 ([d03d171](https://github.com/wppconnect-team/wa-version/commit/d03d1716e708e4faca7246b8c10fc1d154ece83f))
-* Removed outdated version: 2.2240.7-beta ([246d32f](https://github.com/wppconnect-team/wa-version/commit/246d32f5d8e4ab903382876a4d0446c457f65ae8))
-* Removed outdated version: 2.2241.6-beta ([6c2f8b8](https://github.com/wppconnect-team/wa-version/commit/6c2f8b8086be09c74dbd4513e5df852f1e3badfb))
-* Removed outdated version: 2.2241.7 ([1c26eef](https://github.com/wppconnect-team/wa-version/commit/1c26eef9443af0ca2b9b005e781f14cde088dcfd))
-* Removed outdated version: 2.2241.7-beta ([63514ff](https://github.com/wppconnect-team/wa-version/commit/63514ff211a104831a08496aa59d17c18d1d0ef3))
-* Removed outdated version: 2.2242.5-beta ([405b8dd](https://github.com/wppconnect-team/wa-version/commit/405b8ddbc29448f50441bfc496d010bdda2536bc))
-* Removed outdated version: 2.2242.6 ([8793c71](https://github.com/wppconnect-team/wa-version/commit/8793c71a2db2eccf52d821f198f7f84881800ede))
-* Removed outdated version: 2.2242.6-beta ([6e625e9](https://github.com/wppconnect-team/wa-version/commit/6e625e9101f4fb5bf1b3a5ec5f8999ac244d7186))
-* Removed outdated version: 2.2243.5-beta ([b373cb2](https://github.com/wppconnect-team/wa-version/commit/b373cb2029462cdfa1cb521061b2d2b53588abb4))
-* Removed outdated version: 2.2243.7 ([9eb1e03](https://github.com/wppconnect-team/wa-version/commit/9eb1e037b757963bbafa4dd864fb1918a6723a40))
-* Removed outdated version: 2.2243.7-beta ([8659698](https://github.com/wppconnect-team/wa-version/commit/8659698af6db8a0e8ef88d80c871f467758280d2))
-* Removed outdated version: 2.2244.5-beta ([2241d2d](https://github.com/wppconnect-team/wa-version/commit/2241d2df8d97bbea27620d81be455539dd88a9a5))
-* Removed outdated version: 2.2244.6 ([d02c385](https://github.com/wppconnect-team/wa-version/commit/d02c3858790a1c38fadb07a8ef71cb5b5b7c08a6))
-* Removed outdated version: 2.2244.6-beta ([f94235f](https://github.com/wppconnect-team/wa-version/commit/f94235fe2b3c1e685ae13f02a3e0e8bb245e4900))
-* Removed outdated version: 2.2245.8-beta ([0b41c48](https://github.com/wppconnect-team/wa-version/commit/0b41c48df5e7aaad2768d4e62bdaf2e68aca636e))
-* Removed outdated version: 2.2245.9 ([df0582d](https://github.com/wppconnect-team/wa-version/commit/df0582de9d671a7e92b0ad2846b790f5cad73c45))
-* Removed outdated version: 2.2245.9-beta ([77c4e8b](https://github.com/wppconnect-team/wa-version/commit/77c4e8b82331e040c38e4e3ac1d084f358c1321e))
-* Removed outdated version: 2.2246.10 ([90b60bd](https://github.com/wppconnect-team/wa-version/commit/90b60bd2f57b90dca7449d63cf9761e47d97dc4d))
-* Removed outdated version: 2.2246.10-beta ([30393b0](https://github.com/wppconnect-team/wa-version/commit/30393b0879db699aeb164f063e2ede85d3187661))
-* Removed outdated version: 2.2246.8-beta ([267a3ad](https://github.com/wppconnect-team/wa-version/commit/267a3ad25e1b9199e288e45c52e17c5d9b540385))
-* Removed outdated version: 2.2246.9-beta ([82e5f30](https://github.com/wppconnect-team/wa-version/commit/82e5f3086efed80e8d1374e285ac16549187a260))
-* Removed outdated version: 2.2247.5-beta ([cf7dde2](https://github.com/wppconnect-team/wa-version/commit/cf7dde2a05e31e67a9682417f07683a6f0217f2f))
-* Removed outdated version: 2.2247.6 ([defce3a](https://github.com/wppconnect-team/wa-version/commit/defce3a66cb0387d8a70be67640cfeb01ccd0ece))
-* Removed outdated version: 2.2247.6-beta ([42aea66](https://github.com/wppconnect-team/wa-version/commit/42aea66b7aa13752e7ff68c336ec27553b35d326))
-* Removed outdated version: 2.2247.7 ([7032b2e](https://github.com/wppconnect-team/wa-version/commit/7032b2e14be0c48555d46aeedffdcfe35ca97541))
-* Removed outdated version: 2.2247.7-beta ([a097741](https://github.com/wppconnect-team/wa-version/commit/a097741015d8e19b1bb45348ff7a29f7c88f1f65))
-* Removed outdated version: 2.2301.5-beta ([974eb8e](https://github.com/wppconnect-team/wa-version/commit/974eb8e9de0c308604665f7e75d54be900ab670d))
-* Removed outdated version: 2.2301.6 ([8f133bd](https://github.com/wppconnect-team/wa-version/commit/8f133bd0e040468a948cc34aaec56b08124be07b))
-* Removed outdated version: 2.2301.6-beta ([5cc162b](https://github.com/wppconnect-team/wa-version/commit/5cc162bc9203b64caf6b1684c8bccdec3b168a1b))
-* Removed outdated version: 2.2302.6-beta ([55116a8](https://github.com/wppconnect-team/wa-version/commit/55116a810593386b62c395171c553c1b99a73707))
-* Removed outdated version: 2.2302.7-beta ([700ad7f](https://github.com/wppconnect-team/wa-version/commit/700ad7f7a79129c2f78805dff99e9aa5103e326c))
-* Removed outdated version: 2.2302.8 ([52e62b8](https://github.com/wppconnect-team/wa-version/commit/52e62b83ffb578035bfa317f228f6fc2261babf9))
-* Removed outdated version: 2.2302.8-beta ([7a4ff22](https://github.com/wppconnect-team/wa-version/commit/7a4ff22e0d944dc0d931fe8a1d81b86e4dfacc9c))
-* Removed outdated version: 2.2304.4-beta ([50c052f](https://github.com/wppconnect-team/wa-version/commit/50c052f3c969fb909ad0df330dda8a1c64a55e46))
-* Removed outdated version: 2.2304.5-beta ([c48b99a](https://github.com/wppconnect-team/wa-version/commit/c48b99a9ddd13dfb72a9d9e2cec84f6e4ed58b86))
-* Removed outdated version: 2.2304.7 ([2977123](https://github.com/wppconnect-team/wa-version/commit/29771230cc94934da4abcc628a9fc74c38637e39))
-* Removed outdated version: 2.2304.7-beta ([08d6d97](https://github.com/wppconnect-team/wa-version/commit/08d6d97e8a5df831caec0f57335ed005a766b039))
-* Removed outdated version: 2.2305.5-beta ([91969bd](https://github.com/wppconnect-team/wa-version/commit/91969bdf9ea700b8d2a7fbeae3246b77e39cb653))
-* Removed outdated version: 2.2305.6-beta ([75ebdad](https://github.com/wppconnect-team/wa-version/commit/75ebdad59026107868f5b49c74835684e7165e51))
-* Removed outdated version: 2.2305.7 ([ffcd145](https://github.com/wppconnect-team/wa-version/commit/ffcd1453b5ad69ec7873e88a4978cf7a52f3ea57))
-* Removed outdated version: 2.2305.7-beta ([aa45f98](https://github.com/wppconnect-team/wa-version/commit/aa45f98e3db3a2b57e0c2b116c8e96c0f883d71d))
-* Removed outdated version: 2.2306.7 ([4e164af](https://github.com/wppconnect-team/wa-version/commit/4e164af24edd120b3a31b0ed958efca605759c34))
-* Removed outdated version: 2.2306.7-beta ([641915e](https://github.com/wppconnect-team/wa-version/commit/641915e6658e60904ec62f697d5056db770db674))
-* Removed outdated version: 2.2307.5 ([c43cc2a](https://github.com/wppconnect-team/wa-version/commit/c43cc2a79020717461b32180eb21ac8f839be708))
-* Removed outdated version: 2.2307.5-beta ([14d5644](https://github.com/wppconnect-team/wa-version/commit/14d564489f76eee0a07a6974b73ecf3debf00e6c))
-* Removed outdated version: 2.2307.9 ([5f56460](https://github.com/wppconnect-team/wa-version/commit/5f56460ee5725fefcb3966dfe8a42b653bb35133))
-
-
+- Removed outdated version: 2.2232.7 ([1c44b1a](https://github.com/wppconnect-team/wa-version/commit/1c44b1a07f0388d11cec91602947fdba76eef1f0))
+- Removed outdated version: 2.2232.7-beta ([0bd106b](https://github.com/wppconnect-team/wa-version/commit/0bd106b56c593547f2f35ce533f0684a2f63184e))
+- Removed outdated version: 2.2232.8 ([8f8d8e5](https://github.com/wppconnect-team/wa-version/commit/8f8d8e51c9f2655e3c330ba1bfde2d80853df685))
+- Removed outdated version: 2.2232.8-beta ([3fd9bec](https://github.com/wppconnect-team/wa-version/commit/3fd9becbc768677dd68274a8379e987c5945b5cc))
+- Removed outdated version: 2.2234.11-beta ([53e8dfb](https://github.com/wppconnect-team/wa-version/commit/53e8dfb4e4de72137812f2e6c73940276867806d))
+- Removed outdated version: 2.2234.12-beta ([74213f5](https://github.com/wppconnect-team/wa-version/commit/74213f5e1e805b119cc1312aa0556fb290f1f82d))
+- Removed outdated version: 2.2234.13 ([966250b](https://github.com/wppconnect-team/wa-version/commit/966250bddacbb5ff7a4c46e46738824b24d1d026))
+- Removed outdated version: 2.2234.13-beta ([829dcf4](https://github.com/wppconnect-team/wa-version/commit/829dcf47700eef4278d916241730e20fa519537d))
+- Removed outdated version: 2.2234.6-beta ([c3a8e64](https://github.com/wppconnect-team/wa-version/commit/c3a8e648e512d18778b1ba326ad8ee7929ed681f))
+- Removed outdated version: 2.2234.7-beta ([024fa54](https://github.com/wppconnect-team/wa-version/commit/024fa5444d36479217cf20b4141d57906a641f29))
+- Removed outdated version: 2.2234.8-beta ([31a1a42](https://github.com/wppconnect-team/wa-version/commit/31a1a42f905ff3bd6ae4acfaac01d2502ba423ed))
+- Removed outdated version: 2.2236.10 ([d9b9a6e](https://github.com/wppconnect-team/wa-version/commit/d9b9a6edca94af524c7fc9bd42cd68ca5a05fad0))
+- Removed outdated version: 2.2236.10-beta ([c09716b](https://github.com/wppconnect-team/wa-version/commit/c09716b14db816d6312f5ec61732166e604d08cb))
+- Removed outdated version: 2.2236.4-beta ([b596c62](https://github.com/wppconnect-team/wa-version/commit/b596c62785bc721487d01020d2c31389c0cbb122))
+- Removed outdated version: 2.2236.5-beta ([7554f66](https://github.com/wppconnect-team/wa-version/commit/7554f668891037bf53c77f1b155629736187619d))
+- Removed outdated version: 2.2236.6-beta ([c0258a7](https://github.com/wppconnect-team/wa-version/commit/c0258a7815a3c0e18787bd0e7b7bbd50b6148eee))
+- Removed outdated version: 2.2236.7-beta ([a6531ea](https://github.com/wppconnect-team/wa-version/commit/a6531eaa61c6af59a758edf1e28ac8f3d0a9a85b))
+- Removed outdated version: 2.2236.8-beta ([a08290a](https://github.com/wppconnect-team/wa-version/commit/a08290a15a7f63b42f6af264756c897cf1daf622))
+- Removed outdated version: 2.2238.5-beta ([303ec2d](https://github.com/wppconnect-team/wa-version/commit/303ec2d24e0c1bb3d49f4fa19eefa85313a78ef2))
+- Removed outdated version: 2.2238.6-beta ([2dc2cc2](https://github.com/wppconnect-team/wa-version/commit/2dc2cc2e32819881b037205a7851ddb8d32ca550))
+- Removed outdated version: 2.2238.7 ([4a6cffe](https://github.com/wppconnect-team/wa-version/commit/4a6cffed6a2140b7d01e6352e714f3df1ea615ea))
+- Removed outdated version: 2.2238.7-beta ([b61faa7](https://github.com/wppconnect-team/wa-version/commit/b61faa761ad9747f32f72f64e9885833386abfbf))
+- Removed outdated version: 2.2240.5-beta ([6aa232a](https://github.com/wppconnect-team/wa-version/commit/6aa232ada910d98a740c3e35525cd48942fb589c))
+- Removed outdated version: 2.2240.7 ([d03d171](https://github.com/wppconnect-team/wa-version/commit/d03d1716e708e4faca7246b8c10fc1d154ece83f))
+- Removed outdated version: 2.2240.7-beta ([246d32f](https://github.com/wppconnect-team/wa-version/commit/246d32f5d8e4ab903382876a4d0446c457f65ae8))
+- Removed outdated version: 2.2241.6-beta ([6c2f8b8](https://github.com/wppconnect-team/wa-version/commit/6c2f8b8086be09c74dbd4513e5df852f1e3badfb))
+- Removed outdated version: 2.2241.7 ([1c26eef](https://github.com/wppconnect-team/wa-version/commit/1c26eef9443af0ca2b9b005e781f14cde088dcfd))
+- Removed outdated version: 2.2241.7-beta ([63514ff](https://github.com/wppconnect-team/wa-version/commit/63514ff211a104831a08496aa59d17c18d1d0ef3))
+- Removed outdated version: 2.2242.5-beta ([405b8dd](https://github.com/wppconnect-team/wa-version/commit/405b8ddbc29448f50441bfc496d010bdda2536bc))
+- Removed outdated version: 2.2242.6 ([8793c71](https://github.com/wppconnect-team/wa-version/commit/8793c71a2db2eccf52d821f198f7f84881800ede))
+- Removed outdated version: 2.2242.6-beta ([6e625e9](https://github.com/wppconnect-team/wa-version/commit/6e625e9101f4fb5bf1b3a5ec5f8999ac244d7186))
+- Removed outdated version: 2.2243.5-beta ([b373cb2](https://github.com/wppconnect-team/wa-version/commit/b373cb2029462cdfa1cb521061b2d2b53588abb4))
+- Removed outdated version: 2.2243.7 ([9eb1e03](https://github.com/wppconnect-team/wa-version/commit/9eb1e037b757963bbafa4dd864fb1918a6723a40))
+- Removed outdated version: 2.2243.7-beta ([8659698](https://github.com/wppconnect-team/wa-version/commit/8659698af6db8a0e8ef88d80c871f467758280d2))
+- Removed outdated version: 2.2244.5-beta ([2241d2d](https://github.com/wppconnect-team/wa-version/commit/2241d2df8d97bbea27620d81be455539dd88a9a5))
+- Removed outdated version: 2.2244.6 ([d02c385](https://github.com/wppconnect-team/wa-version/commit/d02c3858790a1c38fadb07a8ef71cb5b5b7c08a6))
+- Removed outdated version: 2.2244.6-beta ([f94235f](https://github.com/wppconnect-team/wa-version/commit/f94235fe2b3c1e685ae13f02a3e0e8bb245e4900))
+- Removed outdated version: 2.2245.8-beta ([0b41c48](https://github.com/wppconnect-team/wa-version/commit/0b41c48df5e7aaad2768d4e62bdaf2e68aca636e))
+- Removed outdated version: 2.2245.9 ([df0582d](https://github.com/wppconnect-team/wa-version/commit/df0582de9d671a7e92b0ad2846b790f5cad73c45))
+- Removed outdated version: 2.2245.9-beta ([77c4e8b](https://github.com/wppconnect-team/wa-version/commit/77c4e8b82331e040c38e4e3ac1d084f358c1321e))
+- Removed outdated version: 2.2246.10 ([90b60bd](https://github.com/wppconnect-team/wa-version/commit/90b60bd2f57b90dca7449d63cf9761e47d97dc4d))
+- Removed outdated version: 2.2246.10-beta ([30393b0](https://github.com/wppconnect-team/wa-version/commit/30393b0879db699aeb164f063e2ede85d3187661))
+- Removed outdated version: 2.2246.8-beta ([267a3ad](https://github.com/wppconnect-team/wa-version/commit/267a3ad25e1b9199e288e45c52e17c5d9b540385))
+- Removed outdated version: 2.2246.9-beta ([82e5f30](https://github.com/wppconnect-team/wa-version/commit/82e5f3086efed80e8d1374e285ac16549187a260))
+- Removed outdated version: 2.2247.5-beta ([cf7dde2](https://github.com/wppconnect-team/wa-version/commit/cf7dde2a05e31e67a9682417f07683a6f0217f2f))
+- Removed outdated version: 2.2247.6 ([defce3a](https://github.com/wppconnect-team/wa-version/commit/defce3a66cb0387d8a70be67640cfeb01ccd0ece))
+- Removed outdated version: 2.2247.6-beta ([42aea66](https://github.com/wppconnect-team/wa-version/commit/42aea66b7aa13752e7ff68c336ec27553b35d326))
+- Removed outdated version: 2.2247.7 ([7032b2e](https://github.com/wppconnect-team/wa-version/commit/7032b2e14be0c48555d46aeedffdcfe35ca97541))
+- Removed outdated version: 2.2247.7-beta ([a097741](https://github.com/wppconnect-team/wa-version/commit/a097741015d8e19b1bb45348ff7a29f7c88f1f65))
+- Removed outdated version: 2.2301.5-beta ([974eb8e](https://github.com/wppconnect-team/wa-version/commit/974eb8e9de0c308604665f7e75d54be900ab670d))
+- Removed outdated version: 2.2301.6 ([8f133bd](https://github.com/wppconnect-team/wa-version/commit/8f133bd0e040468a948cc34aaec56b08124be07b))
+- Removed outdated version: 2.2301.6-beta ([5cc162b](https://github.com/wppconnect-team/wa-version/commit/5cc162bc9203b64caf6b1684c8bccdec3b168a1b))
+- Removed outdated version: 2.2302.6-beta ([55116a8](https://github.com/wppconnect-team/wa-version/commit/55116a810593386b62c395171c553c1b99a73707))
+- Removed outdated version: 2.2302.7-beta ([700ad7f](https://github.com/wppconnect-team/wa-version/commit/700ad7f7a79129c2f78805dff99e9aa5103e326c))
+- Removed outdated version: 2.2302.8 ([52e62b8](https://github.com/wppconnect-team/wa-version/commit/52e62b83ffb578035bfa317f228f6fc2261babf9))
+- Removed outdated version: 2.2302.8-beta ([7a4ff22](https://github.com/wppconnect-team/wa-version/commit/7a4ff22e0d944dc0d931fe8a1d81b86e4dfacc9c))
+- Removed outdated version: 2.2304.4-beta ([50c052f](https://github.com/wppconnect-team/wa-version/commit/50c052f3c969fb909ad0df330dda8a1c64a55e46))
+- Removed outdated version: 2.2304.5-beta ([c48b99a](https://github.com/wppconnect-team/wa-version/commit/c48b99a9ddd13dfb72a9d9e2cec84f6e4ed58b86))
+- Removed outdated version: 2.2304.7 ([2977123](https://github.com/wppconnect-team/wa-version/commit/29771230cc94934da4abcc628a9fc74c38637e39))
+- Removed outdated version: 2.2304.7-beta ([08d6d97](https://github.com/wppconnect-team/wa-version/commit/08d6d97e8a5df831caec0f57335ed005a766b039))
+- Removed outdated version: 2.2305.5-beta ([91969bd](https://github.com/wppconnect-team/wa-version/commit/91969bdf9ea700b8d2a7fbeae3246b77e39cb653))
+- Removed outdated version: 2.2305.6-beta ([75ebdad](https://github.com/wppconnect-team/wa-version/commit/75ebdad59026107868f5b49c74835684e7165e51))
+- Removed outdated version: 2.2305.7 ([ffcd145](https://github.com/wppconnect-team/wa-version/commit/ffcd1453b5ad69ec7873e88a4978cf7a52f3ea57))
+- Removed outdated version: 2.2305.7-beta ([aa45f98](https://github.com/wppconnect-team/wa-version/commit/aa45f98e3db3a2b57e0c2b116c8e96c0f883d71d))
+- Removed outdated version: 2.2306.7 ([4e164af](https://github.com/wppconnect-team/wa-version/commit/4e164af24edd120b3a31b0ed958efca605759c34))
+- Removed outdated version: 2.2306.7-beta ([641915e](https://github.com/wppconnect-team/wa-version/commit/641915e6658e60904ec62f697d5056db770db674))
+- Removed outdated version: 2.2307.5 ([c43cc2a](https://github.com/wppconnect-team/wa-version/commit/c43cc2a79020717461b32180eb21ac8f839be708))
+- Removed outdated version: 2.2307.5-beta ([14d5644](https://github.com/wppconnect-team/wa-version/commit/14d564489f76eee0a07a6974b73ecf3debf00e6c))
+- Removed outdated version: 2.2307.9 ([5f56460](https://github.com/wppconnect-team/wa-version/commit/5f56460ee5725fefcb3966dfe8a42b653bb35133))
 
 ## [1.1.256](https://github.com/wppconnect-team/wa-version/compare/v1.1.255...v1.1.256) (2023-02-18)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2307.10 ([9c4d03d](https://github.com/wppconnect-team/wa-version/commit/9c4d03ddf57b3e70925177ec7036392843a3171d))
-
-
+- Added new version: 2.2307.10 ([9c4d03d](https://github.com/wppconnect-team/wa-version/commit/9c4d03ddf57b3e70925177ec7036392843a3171d))
 
 ## [1.1.255](https://github.com/wppconnect-team/wa-version/compare/v1.1.254...v1.1.255) (2023-02-18)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2307.9 ([2318ff9](https://github.com/wppconnect-team/wa-version/commit/2318ff98fab3637936de0ccbdb3979d9aad09ef0))
-
-
+- Added new version: 2.2307.9 ([2318ff9](https://github.com/wppconnect-team/wa-version/commit/2318ff98fab3637936de0ccbdb3979d9aad09ef0))
 
 ## 1.1.254 (2023-02-18)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2232.6-beta ([f10f900](https://github.com/wppconnect-team/wa-version/commit/f10f900a3954c6201679920d0937dc60389d290f))
-
-
+- Removed outdated version: 2.2232.6-beta ([f10f900](https://github.com/wppconnect-team/wa-version/commit/f10f900a3954c6201679920d0937dc60389d290f))
 
 ## 1.1.253 (2023-02-16)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2307.5 ([2801ab6](https://github.com/wppconnect-team/wa-version/commit/2801ab6f97cdb1ab2ed1c7bba3892bcb7b699925))
-
-
+- Added new version: 2.2307.5 ([2801ab6](https://github.com/wppconnect-team/wa-version/commit/2801ab6f97cdb1ab2ed1c7bba3892bcb7b699925))
 
 ## 1.1.252 (2023-02-14)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2230.15 ([ea37fb9](https://github.com/wppconnect-team/wa-version/commit/ea37fb9966b32246b6cc00c11cc9e159a5cc6bb7))
-* Removed outdated version: 2.2230.15-beta ([a41d27d](https://github.com/wppconnect-team/wa-version/commit/a41d27d42c7421af959f3ad64d3d3fc0f2e5aba8))
-
-
+- Removed outdated version: 2.2230.15 ([ea37fb9](https://github.com/wppconnect-team/wa-version/commit/ea37fb9966b32246b6cc00c11cc9e159a5cc6bb7))
+- Removed outdated version: 2.2230.15-beta ([a41d27d](https://github.com/wppconnect-team/wa-version/commit/a41d27d42c7421af959f3ad64d3d3fc0f2e5aba8))
 
 ## 1.1.251 (2023-02-13)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2307.5-beta ([9691e94](https://github.com/wppconnect-team/wa-version/commit/9691e9420dc0438eab6aa0e25cd524c0318781cb))
-
-
+- Added new version: 2.2307.5-beta ([9691e94](https://github.com/wppconnect-team/wa-version/commit/9691e9420dc0438eab6aa0e25cd524c0318781cb))
 
 ## 1.1.250 (2023-02-11)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2230.13 ([ba4d28e](https://github.com/wppconnect-team/wa-version/commit/ba4d28ef698ca573e6fc66748da2947db9871ade))
-* Removed outdated version: 2.2230.13-beta ([e737d1f](https://github.com/wppconnect-team/wa-version/commit/e737d1fce8020c320df407817a858e1d32b14e34))
-
-
+- Removed outdated version: 2.2230.13 ([ba4d28e](https://github.com/wppconnect-team/wa-version/commit/ba4d28ef698ca573e6fc66748da2947db9871ade))
+- Removed outdated version: 2.2230.13-beta ([e737d1f](https://github.com/wppconnect-team/wa-version/commit/e737d1fce8020c320df407817a858e1d32b14e34))
 
 ## 1.1.249 (2023-02-10)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2306.7 ([888ca4b](https://github.com/wppconnect-team/wa-version/commit/888ca4bddbbc7e5e62004552c761b593505b93e4))
-
-
+- Added new version: 2.2306.7 ([888ca4b](https://github.com/wppconnect-team/wa-version/commit/888ca4bddbbc7e5e62004552c761b593505b93e4))
 
 ## 1.1.248 (2023-02-06)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2306.7-beta ([1c1737b](https://github.com/wppconnect-team/wa-version/commit/1c1737b20ae8f50f6f99f8476dd95018adc20d4d))
-
-
+- Added new version: 2.2306.7-beta ([1c1737b](https://github.com/wppconnect-team/wa-version/commit/1c1737b20ae8f50f6f99f8476dd95018adc20d4d))
 
 ## [1.1.247](https://github.com/wppconnect-team/wa-version/compare/v1.1.246...v1.1.247) (2023-02-06)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2230.10 ([9bb932d](https://github.com/wppconnect-team/wa-version/commit/9bb932da55b9372541181edbefd9a962ff40dc57))
-* Removed outdated version: 2.2230.10-beta ([2ccbc7b](https://github.com/wppconnect-team/wa-version/commit/2ccbc7b6be06e16823a6d7bd64cff33d11c7bd68))
-
-
+- Removed outdated version: 2.2230.10 ([9bb932d](https://github.com/wppconnect-team/wa-version/commit/9bb932da55b9372541181edbefd9a962ff40dc57))
+- Removed outdated version: 2.2230.10-beta ([2ccbc7b](https://github.com/wppconnect-team/wa-version/commit/2ccbc7b6be06e16823a6d7bd64cff33d11c7bd68))
 
 ## [1.1.246](https://github.com/wppconnect-team/wa-version/compare/v1.1.245...v1.1.246) (2023-02-05)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2230.9-beta ([22af6c9](https://github.com/wppconnect-team/wa-version/commit/22af6c995445df72c4cdcb5e17de7bb51fa9ce7c))
-
-
+- Removed outdated version: 2.2230.9-beta ([22af6c9](https://github.com/wppconnect-team/wa-version/commit/22af6c995445df72c4cdcb5e17de7bb51fa9ce7c))
 
 ## [1.1.245](https://github.com/wppconnect-team/wa-version/compare/v1.1.244...v1.1.245) (2023-02-04)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2230.8-beta ([c405a53](https://github.com/wppconnect-team/wa-version/commit/c405a531be10fd756d6ef859f8caaba45ed184e4))
-
-
+- Removed outdated version: 2.2230.8-beta ([c405a53](https://github.com/wppconnect-team/wa-version/commit/c405a531be10fd756d6ef859f8caaba45ed184e4))
 
 ## [1.1.244](https://github.com/wppconnect-team/wa-version/compare/v1.1.243...v1.1.244) (2023-02-03)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2305.7 ([ec224fd](https://github.com/wppconnect-team/wa-version/commit/ec224fd4ce21919290191114445d87b904f352a8))
-
-
+- Added new version: 2.2305.7 ([ec224fd](https://github.com/wppconnect-team/wa-version/commit/ec224fd4ce21919290191114445d87b904f352a8))
 
 ## [1.1.243](https://github.com/wppconnect-team/wa-version/compare/v1.1.242...v1.1.243) (2023-02-01)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2305.7-beta ([1a1ad3c](https://github.com/wppconnect-team/wa-version/commit/1a1ad3c0027cdc1a91e10fbcdc1d471f5a9875cc))
-
-
+- Added new version: 2.2305.7-beta ([1a1ad3c](https://github.com/wppconnect-team/wa-version/commit/1a1ad3c0027cdc1a91e10fbcdc1d471f5a9875cc))
 
 ## [1.1.242](https://github.com/wppconnect-team/wa-version/compare/v1.1.241...v1.1.242) (2023-02-01)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2305.6-beta ([cff5aa6](https://github.com/wppconnect-team/wa-version/commit/cff5aa6e4ecedde6392f2d8bfdfdb8e8c3740c68))
-
-
+- Added new version: 2.2305.6-beta ([cff5aa6](https://github.com/wppconnect-team/wa-version/commit/cff5aa6e4ecedde6392f2d8bfdfdb8e8c3740c68))
 
 ## 1.1.241 (2023-02-01)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.14 ([c0edd9a](https://github.com/wppconnect-team/wa-version/commit/c0edd9aca0437c50831a55178ba1011e62a9f269))
-* Removed outdated version: 2.2228.14-beta ([8908e8b](https://github.com/wppconnect-team/wa-version/commit/8908e8b05c36a811fd8c0712c13d758418ada2da))
-
-
+- Removed outdated version: 2.2228.14 ([c0edd9a](https://github.com/wppconnect-team/wa-version/commit/c0edd9aca0437c50831a55178ba1011e62a9f269))
+- Removed outdated version: 2.2228.14-beta ([8908e8b](https://github.com/wppconnect-team/wa-version/commit/8908e8b05c36a811fd8c0712c13d758418ada2da))
 
 ## 1.1.240 (2023-01-30)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2305.5-beta ([1f9dddc](https://github.com/wppconnect-team/wa-version/commit/1f9dddc35cbb6d024d211d9e8c632b1dce6b3edf))
-
-
+- Added new version: 2.2305.5-beta ([1f9dddc](https://github.com/wppconnect-team/wa-version/commit/1f9dddc35cbb6d024d211d9e8c632b1dce6b3edf))
 
 ## 1.1.239 (2023-01-29)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.12 ([249df4b](https://github.com/wppconnect-team/wa-version/commit/249df4b8dcc9d2800ec0ed06946bddc1f2441773))
-* Removed outdated version: 2.2228.12-beta ([eabb4f4](https://github.com/wppconnect-team/wa-version/commit/eabb4f46ac2d5c687333f2dec3833c02025d0a9f))
-
-
+- Removed outdated version: 2.2228.12 ([249df4b](https://github.com/wppconnect-team/wa-version/commit/249df4b8dcc9d2800ec0ed06946bddc1f2441773))
+- Removed outdated version: 2.2228.12-beta ([eabb4f4](https://github.com/wppconnect-team/wa-version/commit/eabb4f46ac2d5c687333f2dec3833c02025d0a9f))
 
 ## [1.1.238](https://github.com/wppconnect-team/wa-version/compare/v1.1.237...v1.1.238) (2023-01-28)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.8 ([eb8b33a](https://github.com/wppconnect-team/wa-version/commit/eb8b33af92837c063ce3846ad5929875718abdc1))
-* Removed outdated version: 2.2228.8-beta ([78a2df4](https://github.com/wppconnect-team/wa-version/commit/78a2df44b97c0d5941accb895fde55fa54980cd2))
-
-
+- Removed outdated version: 2.2228.8 ([eb8b33a](https://github.com/wppconnect-team/wa-version/commit/eb8b33af92837c063ce3846ad5929875718abdc1))
+- Removed outdated version: 2.2228.8-beta ([78a2df4](https://github.com/wppconnect-team/wa-version/commit/78a2df44b97c0d5941accb895fde55fa54980cd2))
 
 ## [1.1.237](https://github.com/wppconnect-team/wa-version/compare/v1.1.236...v1.1.237) (2023-01-27)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2304.7 ([79d296b](https://github.com/wppconnect-team/wa-version/commit/79d296b7a830321e6a328430df8218f0a9e52b24))
-
-
+- Added new version: 2.2304.7 ([79d296b](https://github.com/wppconnect-team/wa-version/commit/79d296b7a830321e6a328430df8218f0a9e52b24))
 
 ## [1.1.236](https://github.com/wppconnect-team/wa-version/compare/v1.1.235...v1.1.236) (2023-01-26)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2304.7-beta ([f94ae30](https://github.com/wppconnect-team/wa-version/commit/f94ae301a1469c321699aaf68d283e176190913a))
-
-
+- Added new version: 2.2304.7-beta ([f94ae30](https://github.com/wppconnect-team/wa-version/commit/f94ae301a1469c321699aaf68d283e176190913a))
 
 ## [1.1.235](https://github.com/wppconnect-team/wa-version/compare/v1.1.234...v1.1.235) (2023-01-25)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.6 ([c03a665](https://github.com/wppconnect-team/wa-version/commit/c03a665d1ad9c867c6ccd616067958a509e88e7e))
-* Removed outdated version: 2.2228.6-beta ([c4677d0](https://github.com/wppconnect-team/wa-version/commit/c4677d098bc851738841c243bc43a7f1afc1a559))
-
-
+- Removed outdated version: 2.2228.6 ([c03a665](https://github.com/wppconnect-team/wa-version/commit/c03a665d1ad9c867c6ccd616067958a509e88e7e))
+- Removed outdated version: 2.2228.6-beta ([c4677d0](https://github.com/wppconnect-team/wa-version/commit/c4677d098bc851738841c243bc43a7f1afc1a559))
 
 ## [1.1.234](https://github.com/wppconnect-team/wa-version/compare/v1.1.233...v1.1.234) (2023-01-24)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.5-beta ([8b87204](https://github.com/wppconnect-team/wa-version/commit/8b872047f6de29243d15756b23c5b17f6fc70a17))
-
-
+- Removed outdated version: 2.2228.5-beta ([8b87204](https://github.com/wppconnect-team/wa-version/commit/8b872047f6de29243d15756b23c5b17f6fc70a17))
 
 ## 1.1.233 (2023-01-24)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2304.5-beta ([35e01ca](https://github.com/wppconnect-team/wa-version/commit/35e01caba2ef6c175a21f2931c7d467ac086de58))
-
-
+- Added new version: 2.2304.5-beta ([35e01ca](https://github.com/wppconnect-team/wa-version/commit/35e01caba2ef6c175a21f2931c7d467ac086de58))
 
 ## [1.1.232](https://github.com/wppconnect-team/wa-version/compare/v1.1.231...v1.1.232) (2023-01-23)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2304.4-beta ([2a74d7a](https://github.com/wppconnect-team/wa-version/commit/2a74d7a1eac56ec680921072cc46d6b534a113b2))
-
-
+- Added new version: 2.2304.4-beta ([2a74d7a](https://github.com/wppconnect-team/wa-version/commit/2a74d7a1eac56ec680921072cc46d6b534a113b2))
 
 ## 1.1.231 (2023-01-23)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2302.8 ([db32abb](https://github.com/wppconnect-team/wa-version/commit/db32abb2c9ba2ce038e79235d6fedc505914d03a))
-
-
+- Added new version: 2.2302.8 ([db32abb](https://github.com/wppconnect-team/wa-version/commit/db32abb2c9ba2ce038e79235d6fedc505914d03a))
 
 ## 1.1.230 (2023-01-20)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2302.8-beta ([7fc2115](https://github.com/wppconnect-team/wa-version/commit/7fc21152113b5dbdda9f61e8553c1c26be881210))
-
-
+- Added new version: 2.2302.8-beta ([7fc2115](https://github.com/wppconnect-team/wa-version/commit/7fc21152113b5dbdda9f61e8553c1c26be881210))
 
 ## [1.1.229](https://github.com/wppconnect-team/wa-version/compare/v1.1.228...v1.1.229) (2023-01-19)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2302.7-beta ([5dbef56](https://github.com/wppconnect-team/wa-version/commit/5dbef569566a1ce372c5c708a566ea2879f20c13))
-
-
+- Added new version: 2.2302.7-beta ([5dbef56](https://github.com/wppconnect-team/wa-version/commit/5dbef569566a1ce372c5c708a566ea2879f20c13))
 
 ## [1.1.228](https://github.com/wppconnect-team/wa-version/compare/v1.1.227...v1.1.228) (2023-01-19)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2228.4 ([0a05fd0](https://github.com/wppconnect-team/wa-version/commit/0a05fd0a1514a197c9c6481196b9d52851515658))
-* Removed outdated version: 2.2228.4-beta ([8a4ccf1](https://github.com/wppconnect-team/wa-version/commit/8a4ccf11d9801902977d10366c49efd8f9427774))
-
-
+- Removed outdated version: 2.2228.4 ([0a05fd0](https://github.com/wppconnect-team/wa-version/commit/0a05fd0a1514a197c9c6481196b9d52851515658))
+- Removed outdated version: 2.2228.4-beta ([8a4ccf1](https://github.com/wppconnect-team/wa-version/commit/8a4ccf11d9801902977d10366c49efd8f9427774))
 
 ## [1.1.227](https://github.com/wppconnect-team/wa-version/compare/v1.1.226...v1.1.227) (2023-01-17)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2302.6-beta ([6bb5905](https://github.com/wppconnect-team/wa-version/commit/6bb59050faf6e28ef1dac927a041438958a29db5))
-
-
+- Added new version: 2.2302.6-beta ([6bb5905](https://github.com/wppconnect-team/wa-version/commit/6bb59050faf6e28ef1dac927a041438958a29db5))
 
 ## 1.1.226 (2023-01-17)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2226.5 ([1ee4ff1](https://github.com/wppconnect-team/wa-version/commit/1ee4ff1b33f7c32004badd6db1b0d8730ee3487e))
-* Removed outdated version: 2.2226.5-beta ([06a7416](https://github.com/wppconnect-team/wa-version/commit/06a74160185079537cec5e76273666f2a522bc5e))
-
-
+- Removed outdated version: 2.2226.5 ([1ee4ff1](https://github.com/wppconnect-team/wa-version/commit/1ee4ff1b33f7c32004badd6db1b0d8730ee3487e))
+- Removed outdated version: 2.2226.5-beta ([06a7416](https://github.com/wppconnect-team/wa-version/commit/06a74160185079537cec5e76273666f2a522bc5e))
 
 ## 1.1.225 (2023-01-14)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2226.4 ([5f44a77](https://github.com/wppconnect-team/wa-version/commit/5f44a778c79e972c2654f79e447e2f5aed5b1caa))
-* Removed outdated version: 2.2226.4-beta ([eff45b4](https://github.com/wppconnect-team/wa-version/commit/eff45b49aac93b6cf21b0e9b8252d3e5618473d5))
-
-
+- Removed outdated version: 2.2226.4 ([5f44a77](https://github.com/wppconnect-team/wa-version/commit/5f44a778c79e972c2654f79e447e2f5aed5b1caa))
+- Removed outdated version: 2.2226.4-beta ([eff45b4](https://github.com/wppconnect-team/wa-version/commit/eff45b49aac93b6cf21b0e9b8252d3e5618473d5))
 
 ## 1.1.224 (2023-01-14)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2301.6 ([2e77927](https://github.com/wppconnect-team/wa-version/commit/2e779273e6cbce870f30959ebcea23b64355f717))
-
-
+- Added new version: 2.2301.6 ([2e77927](https://github.com/wppconnect-team/wa-version/commit/2e779273e6cbce870f30959ebcea23b64355f717))
 
 ## 1.1.223 (2023-01-12)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2301.6-beta ([0bddb9d](https://github.com/wppconnect-team/wa-version/commit/0bddb9d2c1aa9303ce8715824079f33b02789a2a))
-
-
+- Added new version: 2.2301.6-beta ([0bddb9d](https://github.com/wppconnect-team/wa-version/commit/0bddb9d2c1aa9303ce8715824079f33b02789a2a))
 
 ## 1.1.222 (2023-01-09)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2301.5-beta ([df97e8a](https://github.com/wppconnect-team/wa-version/commit/df97e8a72befbb27dc1390c4e9574a7f5906c1c9))
-
-
+- Added new version: 2.2301.5-beta ([df97e8a](https://github.com/wppconnect-team/wa-version/commit/df97e8a72befbb27dc1390c4e9574a7f5906c1c9))
 
 ## [1.1.221](https://github.com/wppconnect-team/wa-version/compare/v1.1.220...v1.1.221) (2023-01-05)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2247.7 ([86c74cd](https://github.com/wppconnect-team/wa-version/commit/86c74cdfd98275e6d92acac46b7ca3f7526cce5a))
-
-
+- Added new version: 2.2247.7 ([86c74cd](https://github.com/wppconnect-team/wa-version/commit/86c74cdfd98275e6d92acac46b7ca3f7526cce5a))
 
 ## 1.1.220 (2023-01-05)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2226.3-beta ([454942b](https://github.com/wppconnect-team/wa-version/commit/454942bcaf0ed8fb82c011b6bd269b1a7ef163ef))
-
-
+- Removed outdated version: 2.2226.3-beta ([454942b](https://github.com/wppconnect-team/wa-version/commit/454942bcaf0ed8fb82c011b6bd269b1a7ef163ef))
 
 ## [1.1.219](https://github.com/wppconnect-team/wa-version/compare/v1.1.218...v1.1.219) (2023-01-04)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2224.8 ([33b1e94](https://github.com/wppconnect-team/wa-version/commit/33b1e943995a132ca504d3fe2660097be69ebddf))
-* Removed outdated version: 2.2224.8-beta ([85be69d](https://github.com/wppconnect-team/wa-version/commit/85be69d5ac52a1440c406eca6e23c6c9be1d75ba))
-
-
+- Removed outdated version: 2.2224.8 ([33b1e94](https://github.com/wppconnect-team/wa-version/commit/33b1e943995a132ca504d3fe2660097be69ebddf))
+- Removed outdated version: 2.2224.8-beta ([85be69d](https://github.com/wppconnect-team/wa-version/commit/85be69d5ac52a1440c406eca6e23c6c9be1d75ba))
 
 ## 1.1.218 (2023-01-03)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2247.7-beta ([3c101ef](https://github.com/wppconnect-team/wa-version/commit/3c101efb2316940ac37a9c8962c36545c91e7c5b))
-
-
+- Added new version: 2.2247.7-beta ([3c101ef](https://github.com/wppconnect-team/wa-version/commit/3c101efb2316940ac37a9c8962c36545c91e7c5b))
 
 ## 1.1.217 (2022-12-27)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2224.7 ([44ab187](https://github.com/wppconnect-team/wa-version/commit/44ab187f196e17ec44156435c2ad547fa775c259))
-* Removed outdated version: 2.2224.7-beta ([7dbc779](https://github.com/wppconnect-team/wa-version/commit/7dbc7791ee9c5473c790d600adb32eb737393e4b))
-
-
+- Removed outdated version: 2.2224.7 ([44ab187](https://github.com/wppconnect-team/wa-version/commit/44ab187f196e17ec44156435c2ad547fa775c259))
+- Removed outdated version: 2.2224.7-beta ([7dbc779](https://github.com/wppconnect-team/wa-version/commit/7dbc7791ee9c5473c790d600adb32eb737393e4b))
 
 ## [1.1.216](https://github.com/wppconnect-team/wa-version/compare/v1.1.215...v1.1.216) (2022-12-22)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2224.6-beta ([6468b24](https://github.com/wppconnect-team/wa-version/commit/6468b24ac4cb8e02c1da196fc94d4ee22da92134))
-
-
+- Removed outdated version: 2.2224.6-beta ([6468b24](https://github.com/wppconnect-team/wa-version/commit/6468b24ac4cb8e02c1da196fc94d4ee22da92134))
 
 ## 1.1.215 (2022-12-21)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2247.6 ([e8f3efa](https://github.com/wppconnect-team/wa-version/commit/e8f3efaebe912273ce7d284a66ec6713e68f7dd8))
-
-
+- Added new version: 2.2247.6 ([e8f3efa](https://github.com/wppconnect-team/wa-version/commit/e8f3efaebe912273ce7d284a66ec6713e68f7dd8))
 
 ## [1.1.214](https://github.com/wppconnect-team/wa-version/compare/v1.1.213...v1.1.214) (2022-12-15)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2247.6-beta ([41efacf](https://github.com/wppconnect-team/wa-version/commit/41efacfe1591f830513f54791f95b8b622ac3f6f))
-
-
+- Added new version: 2.2247.6-beta ([41efacf](https://github.com/wppconnect-team/wa-version/commit/41efacfe1591f830513f54791f95b8b622ac3f6f))
 
 ## [1.1.213](https://github.com/wppconnect-team/wa-version/compare/v1.1.212...v1.1.213) (2022-12-14)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2222.11 ([fafca70](https://github.com/wppconnect-team/wa-version/commit/fafca70020c296846dc5efe0fc9e541b573fbbd2))
-* Removed outdated version: 2.2222.11-beta ([fa67f38](https://github.com/wppconnect-team/wa-version/commit/fa67f38cb6f90c3d3765d3b2fb6a5594b465de55))
-
-
+- Removed outdated version: 2.2222.11 ([fafca70](https://github.com/wppconnect-team/wa-version/commit/fafca70020c296846dc5efe0fc9e541b573fbbd2))
+- Removed outdated version: 2.2222.11-beta ([fa67f38](https://github.com/wppconnect-team/wa-version/commit/fa67f38cb6f90c3d3765d3b2fb6a5594b465de55))
 
 ## 1.1.212 (2022-12-13)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2222.10-beta ([3725eef](https://github.com/wppconnect-team/wa-version/commit/3725eef4717bd7f3caf7b66db0d2c87c13f47fe1))
-
-
+- Removed outdated version: 2.2222.10-beta ([3725eef](https://github.com/wppconnect-team/wa-version/commit/3725eef4717bd7f3caf7b66db0d2c87c13f47fe1))
 
 ## [1.1.211](https://github.com/wppconnect-team/wa-version/compare/v1.1.210...v1.1.211) (2022-12-12)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2247.5-beta ([01b632a](https://github.com/wppconnect-team/wa-version/commit/01b632aa7af684ef8a1f5eddcc06571d0fa61144))
-
-
+- Added new version: 2.2247.5-beta ([01b632a](https://github.com/wppconnect-team/wa-version/commit/01b632aa7af684ef8a1f5eddcc06571d0fa61144))
 
 ## 1.1.210 (2022-12-12)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2246.10 ([b0133e1](https://github.com/wppconnect-team/wa-version/commit/b0133e1d326475221fac73ee6d835cead1ea2828))
-
-
+- Added new version: 2.2246.10 ([b0133e1](https://github.com/wppconnect-team/wa-version/commit/b0133e1d326475221fac73ee6d835cead1ea2828))
 
 ## [1.1.209](https://github.com/wppconnect-team/wa-version/compare/v1.1.208...v1.1.209) (2022-12-11)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2222.9-beta ([c98f8cf](https://github.com/wppconnect-team/wa-version/commit/c98f8cfed90fe8ad19830fb962800a488f684af0))
-
-
+- Removed outdated version: 2.2222.9-beta ([c98f8cf](https://github.com/wppconnect-team/wa-version/commit/c98f8cfed90fe8ad19830fb962800a488f684af0))
 
 ## 1.1.208 (2022-12-11)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2222.8-beta ([b7ecc91](https://github.com/wppconnect-team/wa-version/commit/b7ecc913ba627b89dc1ae30a65f9d44e4afc6396))
-
-
+- Removed outdated version: 2.2222.8-beta ([b7ecc91](https://github.com/wppconnect-team/wa-version/commit/b7ecc913ba627b89dc1ae30a65f9d44e4afc6396))
 
 ## [1.1.207](https://github.com/wppconnect-team/wa-version/compare/v1.1.206...v1.1.207) (2022-12-08)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2246.10-beta ([6f25200](https://github.com/wppconnect-team/wa-version/commit/6f25200134cd8f576663f0132a679e33df79acd3))
-
-
+- Added new version: 2.2246.10-beta ([6f25200](https://github.com/wppconnect-team/wa-version/commit/6f25200134cd8f576663f0132a679e33df79acd3))
 
 ## 1.1.206 (2022-12-07)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2246.9-beta ([3671ba2](https://github.com/wppconnect-team/wa-version/commit/3671ba29e84dd53a934502bb08bcf84d4d5d81e7))
-
-
+- Added new version: 2.2246.9-beta ([3671ba2](https://github.com/wppconnect-team/wa-version/commit/3671ba29e84dd53a934502bb08bcf84d4d5d81e7))
 
 ## 1.1.205 (2022-12-05)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2246.8-beta ([dd13f78](https://github.com/wppconnect-team/wa-version/commit/dd13f78295a4f011c48fd9781188718ecff9bb96))
-
-
+- Added new version: 2.2246.8-beta ([dd13f78](https://github.com/wppconnect-team/wa-version/commit/dd13f78295a4f011c48fd9781188718ecff9bb96))
 
 ## [1.1.204](https://github.com/wppconnect-team/wa-version/compare/v1.1.203...v1.1.204) (2022-11-27)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2220.8 ([71dac78](https://github.com/wppconnect-team/wa-version/commit/71dac78d23e16a244265c98c4a932b69627f0a71))
-* Removed outdated version: 2.2220.8-beta ([dcb392c](https://github.com/wppconnect-team/wa-version/commit/dcb392c7f726917e11e8d2ed37989c1f09a0dc76))
-
-
+- Removed outdated version: 2.2220.8 ([71dac78](https://github.com/wppconnect-team/wa-version/commit/71dac78d23e16a244265c98c4a932b69627f0a71))
+- Removed outdated version: 2.2220.8-beta ([dcb392c](https://github.com/wppconnect-team/wa-version/commit/dcb392c7f726917e11e8d2ed37989c1f09a0dc76))
 
 ## 1.1.203 (2022-11-24)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2245.9 ([03e0833](https://github.com/wppconnect-team/wa-version/commit/03e083341efe0162fc6b4a826f283d2913a0b75c))
-
-
+- Added new version: 2.2245.9 ([03e0833](https://github.com/wppconnect-team/wa-version/commit/03e083341efe0162fc6b4a826f283d2913a0b75c))
 
 ## 1.1.202 (2022-11-22)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2245.9-beta ([954c1a6](https://github.com/wppconnect-team/wa-version/commit/954c1a6ad57c33ae82d3bc858d8627271dc37b39))
-
-
+- Added new version: 2.2245.9-beta ([954c1a6](https://github.com/wppconnect-team/wa-version/commit/954c1a6ad57c33ae82d3bc858d8627271dc37b39))
 
 ## 1.1.201 (2022-11-21)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2245.8-beta ([bddcca8](https://github.com/wppconnect-team/wa-version/commit/bddcca8cb7ca4ba0d4f3457bdbdf4d2da2ce2a10))
-
-
+- Added new version: 2.2245.8-beta ([bddcca8](https://github.com/wppconnect-team/wa-version/commit/bddcca8cb7ca4ba0d4f3457bdbdf4d2da2ce2a10))
 
 ## 1.1.200 (2022-11-19)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2218.8 ([9655295](https://github.com/wppconnect-team/wa-version/commit/96552957e20d0e12db2cff937f8c7374c3acec5d))
-* Removed outdated version: 2.2218.8-beta ([0e1c544](https://github.com/wppconnect-team/wa-version/commit/0e1c54444760fd58c22c321bb5a7710bc4be4bcd))
-
-
+- Removed outdated version: 2.2218.8 ([9655295](https://github.com/wppconnect-team/wa-version/commit/96552957e20d0e12db2cff937f8c7374c3acec5d))
+- Removed outdated version: 2.2218.8-beta ([0e1c544](https://github.com/wppconnect-team/wa-version/commit/0e1c54444760fd58c22c321bb5a7710bc4be4bcd))
 
 ## [1.1.199](https://github.com/wppconnect-team/wa-version/compare/v1.1.198...v1.1.199) (2022-11-19)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2244.6 ([b84ecf7](https://github.com/wppconnect-team/wa-version/commit/b84ecf72cd129ffde30f3895c0406c6657a8d2ee))
-
-
+- Added new version: 2.2244.6 ([b84ecf7](https://github.com/wppconnect-team/wa-version/commit/b84ecf72cd129ffde30f3895c0406c6657a8d2ee))
 
 ## 1.1.198 (2022-11-16)
 
-
 ### Bug Fixes
 
-* Added new version: 2.2244.6-beta ([1e30f38](https://github.com/wppconnect-team/wa-version/commit/1e30f38fc9dc067068cc38a4ff3896d3808831b3))
-
-
+- Added new version: 2.2244.6-beta ([1e30f38](https://github.com/wppconnect-team/wa-version/commit/1e30f38fc9dc067068cc38a4ff3896d3808831b3))
 
 ## 1.1.197 (2022-11-15)
 
-
 ### Bug Fixes
 
-* Removed outdated version: 2.2218.7 ([eac65e4](https://github.com/wppconnect-team/wa-version/commit/eac65e4d9c1efa64e1297ef35ddef38b8d6c0f52))
-* Removed outdated version: 2.2218.7-beta ([46de73c](https://github.com/wppconnect-team/wa-version/commit/46de73c71212ce5a7fbe22c1853dc9e2fd92bef1))
-
-
+- Removed outdated version: 2.2218.7 ([eac65e4](https://github.com/wppconnect-team/wa-version/commit/eac65e4d9c1efa64e1297ef35ddef38b8d6c0f52))
+- Removed outdated version: 2.2218.7-beta ([46de73c](https://github.com/wppconnect-team/wa-version/commit/46de73c71212ce5a7fbe22c1853dc9e2fd92bef1))
 
 ## [1.1.196](https://github.com/wppconnect-team/wa-version/compare/v1.1.195...v1.1.196) (2022-11-15)
 
