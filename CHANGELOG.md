@@ -1,3 +1,9 @@
+## 1.2.2 (2023-02-28)
+
+### Bug Fixes
+
+- Added new version: 2.2310.5-beta ([1ab851f](https://github.com/wppconnect-team/wa-version/commit/1ab851f8352cc007a92d310e1c6d7a0feca73fc9))
+
 ## 1.2.1 (2023-02-27)
 
 ### Bug Fixes
