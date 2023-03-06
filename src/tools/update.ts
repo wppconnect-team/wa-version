@@ -141,7 +141,7 @@ async function updateLatest() {
 }
 
 async function updateJsonFile() {
-  process.stderr.write(`Updating json file\n`);
+  process.stderr.write(`Updating versions.json file\n`);
 
   const currentVersion = await fetchCurrentVersion();
   const currentBeta = await fetchCurrentBetaVersion();
@@ -204,7 +204,7 @@ async function updateJsonFile() {
     encoding: 'utf8',
   });
 
-  process.stderr.write(`json file updated\n`);
+  process.stderr.write(`The versions.json file was updated\n`);
 
   return null;
 }
@@ -214,7 +214,7 @@ async function run() {
   const newVersion = await updateLatest();
   const hasChanges = !!newVersion || !!outdated.length;
 
-  updateJsonFile();
+  await updateJsonFile();
 
   if (isCI) {
     setGitHubState('hasOutdated', outdated.length > 0);
@@ -237,20 +237,22 @@ async function run() {
 
       if (newVersion) {
         await execa('git', ['add', getVersionPath(newVersion)]);
+        await execa('git', ['add', VERSIONS_FILE]);
+
         const { stdout } = await execa('git', [
           'commit',
           '-m',
           `fix: Added new version: ${newVersion}`,
           getVersionPath(newVersion),
+          VERSIONS_FILE,
         ]);
         process.stderr.write(`${stdout}\n`);
       }
 
-      if (hasChanges) {
+      if (outdated.length > 0 && !newVersion) {
         await execa('git', ['add', VERSIONS_FILE]);
         const { stdout } = await execa('git', [
           'commit',
-          '-a',
           '-m',
           `chore: Updated versions.json`,
         ]);
