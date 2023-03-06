@@ -67,3 +67,9 @@ jobs:
           body: ${{ steps.generate_changelog.outputs.changelog }}
           draft: false
           prerelease: false
+
+      - name: Update WPPConnect Site
+        run: gh workflow run update-whatsapp-versions.yml --repo wppconnect-team/wppconnect-team.github.io
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
