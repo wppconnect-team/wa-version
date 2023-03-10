@@ -253,12 +253,13 @@ async function run() {
         process.stderr.write(`${stdout}\n`);
       }
 
-      if ((outdated.length > 0 && !newVersion) || hasJsonChanges) {
+      if (!newVersion && (outdated.length > 0 || hasJsonChanges)) {
         await execa('git', ['add', VERSIONS_FILE]);
         const { stdout } = await execa('git', [
           'commit',
           '-m',
           `chore: Updated versions.json`,
+          VERSIONS_FILE,
         ]);
         process.stderr.write(`${stdout}\n`);
       }
