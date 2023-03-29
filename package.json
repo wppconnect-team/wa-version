@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@types/node": "^16.18.22",
-    "@types/node-fetch": "^2.6.2",
+    "@types/node-fetch": "^2.6.3",
     "@types/semver": "^7.3.13",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
