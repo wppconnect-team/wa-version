@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.9",
-    "semver": "^7.3.8"
+    "semver": "^7.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
