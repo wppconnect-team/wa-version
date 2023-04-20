@@ -32,7 +32,7 @@
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
     "@commitlint/cz-commitlint": "^17.5.0",
-    "@types/node": "^16.18.23",
+    "@types/node": "^16.18.24",
     "@types/node-fetch": "^2.6.3",
     "@types/semver": "^7.3.13",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
