@@ -29,8 +29,8 @@
     "semver": "^7.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@types/node": "^16.18.34",
     "@types/node-fetch": "^2.6.4",
