@@ -39,7 +39,7 @@ export async function fetchCurrentVersion(): Promise<string | null> {
 
   const betaVersion = matchesBeta[1] || null;
 
-  const re = /(?:wa|version:")([\d.]+)"/g;
+  const re = /(?:assets-manifest-)([\d.]+)\.json/g;
 
   let matches: string[] | null = [];
   do {
