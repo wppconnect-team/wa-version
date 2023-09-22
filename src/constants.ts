@@ -22,7 +22,7 @@ export const WA_CHECK_UPDATE_URL =
   'https://web.whatsapp.com/check-update?version=<version>&platform=web';
 
 export const WA_USER_AGENT =
-  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36';
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36';
 
 export const HTML_DIR = path.resolve(__dirname, '../html');
 

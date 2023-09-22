@@ -16,29 +16,44 @@
 
 import fetch from 'node-fetch';
 import { WA_URL, WA_USER_AGENT } from './constants';
+import { getLatestVersion } from './getLatestVersion';
 
 /**
  * Return the current active noraml version on WhatsApp WEB
  * @returns Version number
  */
 export async function fetchCurrentBetaVersion(): Promise<string | null> {
-  const responseSW = await fetch(`${WA_URL}serviceworker.js`, {
+  const latestVersion = getLatestVersion();
+
+  const wa_beta_version = `production%2F${(
+    Date.now() / 1000 -
+    (3600 / 24) * 30
+  ).toFixed(0)}%2F${latestVersion.replace('-beta', '')}`;
+
+  const responseSW = await fetch(`${WA_URL}`, {
     headers: {
       'user-agent': WA_USER_AGENT,
-      'accept-language': 'en-US,en;q=1',
-      'sec-fetch-mode': 'navigate',
-      cookie: 'wa_lang_pref=en',
-      pragma: 'no-cache',
+      accept:
+        'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+      'accept-language': 'en-US;q=0.9,en;q=0.8',
       'cache-control': 'no-cache',
+      pragma: 'no-cache',
+      'sec-ch-ua':
+        '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+      'sec-fetch-dest': 'document',
+      'sec-fetch-mode': 'navigate',
+      cookie: `wa_lang_pref=en; wa_beta_version=${wa_beta_version}`,
     },
   });
 
-  const textSW = await responseSW.text();
+  const cookie = responseSW.headers.get('Set-Cookie');
 
-  const matches = textSW.match(/wa([\d.]+)\.canary/) || [];
+  if (cookie) {
+    const matches = cookie.match(/wa_beta_version=.+?%2F([\d.]+);/) || [];
 
-  if (matches[1]) {
-    return matches[1];
+    if (matches[1]) {
+      return matches[1];
+    }
   }
 
   return null;
