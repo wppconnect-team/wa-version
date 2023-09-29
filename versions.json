@@ -1,5 +1,5 @@
 {
-  "currentBeta": "2.2341.17",
+  "currentBeta": "2.2341.18",
   "currentVersion": "2.2340.17",
   "versions": [
     {
@@ -487,6 +487,12 @@
       "beta": true,
       "released": "2023-09-28T22:38:51.300Z",
       "expire": "2023-12-27T15:44:32.341Z"
+    },
+    {
+      "version": "2.2341.18-beta",
+      "beta": true,
+      "released": "2023-09-29T01:15:53.348Z",
+      "expire": "2023-12-27T22:40:06.786Z"
     }
   ]
 }
