@@ -3,18 +3,6 @@
   "currentVersion": "2.2353.59",
   "versions": [
     {
-      "version": "2.2327.4-beta",
-      "beta": true,
-      "released": "2023-06-27T20:16:21.972Z",
-      "expire": "2023-12-24T02:17:41.589Z"
-    },
-    {
-      "version": "2.2327.4",
-      "beta": false,
-      "released": "2023-06-28T22:14:35.199Z",
-      "expire": "2023-12-24T02:17:44.458Z"
-    },
-    {
       "version": "2.2327.5",
       "beta": false,
       "released": "2023-07-04T23:15:46.314Z",
