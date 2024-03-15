@@ -1,3 +1,9 @@
+# 1.3.0 (2024-03-15)
+
+### Features
+
+- Added support to WhatsApp WEB >= 2.3000.x (close [#603](https://github.com/wppconnect-team/wa-version/issues/603)) ([b9e876c](https://github.com/wppconnect-team/wa-version/commit/b9e876c3853be5c4a3f531f6ed8a194f8024a573))
+
 ## [1.2.271](https://github.com/wppconnect-team/wa-version/compare/v1.2.270...v1.2.271) (2024-03-14)
 
 ### Bug Fixes
