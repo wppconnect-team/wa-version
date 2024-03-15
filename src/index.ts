@@ -16,11 +16,13 @@
 
 export * from './checkUpdate';
 export * as constants from './constants';
+export * from './fetchCurrentAlphaVersion';
 export * from './fetchCurrentBetaVersion';
 export * from './fetchCurrentVersion';
 export * from './fetchLatest';
 export * from './fetchLatestBeta';
 export * from './getAvailableVersions';
 export * from './getLatestVersion';
+export * from './fetchLatestAlpha';
 export * from './getPageContent';
 export * from './getVersionInfo';

@@ -20,9 +20,11 @@ import * as os from 'os';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR, VERSIONS_FILE } from '../constants';
+import { fetchCurrentAlphaVersion } from '../fetchCurrentAlphaVersion';
 import { fetchCurrentBetaVersion } from '../fetchCurrentBetaVersion';
 import { fetchCurrentVersion } from '../fetchCurrentVersion';
 import { fetchLatest } from '../fetchLatest';
+import { fetchLatestAlpha } from '../fetchLatestAlpha';
 import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
 import { getPageContent } from '../getPageContent';
@@ -66,7 +68,7 @@ async function checkActiveVersions() {
   const outdated: string[] = [];
   for (const version of versions) {
     process.stderr.write(`Cheking update of ${version} - `);
-    const latest = await checkUpdate(version.replace('-beta', ''));
+    const latest = await checkUpdate(version.replace(/-(alpha|beta)/, ''));
     if (latest.isBelowHard) {
       process.stderr.write(`outdated\n`);
       outdated.push(version);
@@ -135,6 +137,21 @@ async function updateLatest() {
     }
   }
 
+  const alphaVersion = await fetchCurrentAlphaVersion();
+  if (alphaVersion) {
+    if (alphaVersion && !versions.includes(alphaVersion)) {
+      process.stderr.write(`New version available: ${alphaVersion}\n`);
+
+      process.stderr.write(`Generating new file\n`);
+      const html = await fetchLatestAlpha();
+      await fs.promises.writeFile(getVersionPath(alphaVersion), html, {
+        encoding: 'utf8',
+      });
+      process.stderr.write(`Done\n`);
+      return alphaVersion;
+    }
+  }
+
   process.stderr.write(`is updated\n`);
 
   return null;
@@ -145,6 +162,7 @@ async function updateJsonFile() {
 
   const currentVersion = await fetchCurrentVersion();
   const currentBeta = await fetchCurrentBetaVersion();
+  const currentAlpha = await fetchCurrentAlphaVersion();
 
   let json = await fs.promises.readFile(VERSIONS_FILE, {
     encoding: 'utf8',
@@ -153,6 +171,7 @@ async function updateJsonFile() {
   const content: {
     currentVersion: string | null;
     currentBeta: string | null;
+    currentAlpha: string | null;
     versions: {
       version: string;
       beta: boolean;
@@ -163,10 +182,12 @@ async function updateJsonFile() {
 
   const hasChanges =
     content.currentVersion !== currentVersion ||
-    content.currentBeta !== currentBeta;
+    content.currentBeta !== currentBeta ||
+    content.currentAlpha !== currentAlpha;
 
   content.currentVersion = currentVersion;
   content.currentBeta = currentBeta;
+  content.currentAlpha = currentAlpha;
 
   const versions = getAvailableVersions();
 
