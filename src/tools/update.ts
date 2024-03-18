@@ -67,8 +67,16 @@ async function checkActiveVersions() {
 
   const outdated: string[] = [];
   for (const version of versions) {
-    process.stderr.write(`Cheking update of ${version} - `);
-    const latest = await checkUpdate(version.replace(/-(alpha|beta)/, ''));
+    process.stderr.write(`Checking update of ${version} - `);
+    const latest = await checkUpdate(
+      version.replace(/-(alpha|beta)/, '')
+    ).catch(() => null);
+
+    if (latest === null) {
+      process.stderr.write(`failed\n`);
+      continue;
+    }
+
     if (latest.isBelowHard) {
       process.stderr.write(`outdated\n`);
       outdated.push(version);
@@ -139,7 +147,12 @@ async function updateLatest() {
 
   const alphaVersion = await fetchCurrentAlphaVersion();
   if (alphaVersion) {
-    if (alphaVersion && !versions.includes(alphaVersion)) {
+    // Check only part of version: 2.3000.1012058694-alpha -> 2.3000.101205
+    const hasNewVersion = versions
+      .map((v) => v.substring(0, 13))
+      .includes(alphaVersion.substring(0, 13));
+
+    if (!hasNewVersion) {
       process.stderr.write(`New version available: ${alphaVersion}\n`);
 
       process.stderr.write(`Generating new file\n`);
