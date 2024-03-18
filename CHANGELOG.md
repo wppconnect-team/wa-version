@@ -1,3 +1,9 @@
+# 1.4.0 (2024-03-18)
+
+### Features
+
+- Improved version check for 2.300.x to avoid span ([0a0f5ee](https://github.com/wppconnect-team/wa-version/commit/0a0f5eee4118da805cee4b06406b4cdf108498ed))
+
 ## [1.3.35](https://github.com/wppconnect-team/wa-version/compare/v1.3.34...v1.3.35) (2024-03-18)
 
 ### Bug Fixes
