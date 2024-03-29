@@ -1,3 +1,10 @@
+## 1.4.22 (2024-03-29)
+
+### Bug Fixes
+
+- Added new version: 2.3000.1012412383-alpha ([c9023db](https://github.com/wppconnect-team/wa-version/commit/c9023dbc254912ffdaf42c91ea418dbd99239370))
+- Adjust cron to check WAUpdate ([a2e9931](https://github.com/wppconnect-team/wa-version/commit/a2e993163522ed78ca7630db0f0092805a1a2334))
+
 ## [1.4.21](https://github.com/wppconnect-team/wa-version/compare/v1.4.20...v1.4.21) (2024-03-29)
 
 ### Bug Fixes
