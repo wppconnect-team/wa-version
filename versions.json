@@ -655,7 +655,13 @@
       "beta": false,
       "released": "2024-04-09T09:12:52.577Z",
       "expire": "2024-04-09T09:12:52.577Z"
+    },
+    {
+      "version": "2.3000.1012651513-alpha",
+      "beta": false,
+      "released": "2024-04-09T20:35:13.939Z",
+      "expire": "2024-04-09T20:35:13.939Z"
     }
   ],
-  "currentAlpha": "2.3000.1012640322-alpha"
+  "currentAlpha": "2.3000.1012651513-alpha"
 }
