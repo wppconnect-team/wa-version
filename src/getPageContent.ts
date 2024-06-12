@@ -64,5 +64,3 @@ export function getPageContent(
     encoding: 'utf8',
   });
 }
-
-getPageContent('2.3000.10125x');
