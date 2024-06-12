@@ -1,3 +1,9 @@
+# 1.5.0 (2024-06-12)
+
+### Bug Fixes
+
+- Removed test ([285191e](https://github.com/wppconnect-team/wa-version/commit/285191ea337ff17fdbb16f3c4cf1cf552c7c6200))
+
 ## [1.4.222](https://github.com/wppconnect-team/wa-version/compare/v1.4.221...v1.4.222) (2024-06-12)
 
 ### Bug Fixes
