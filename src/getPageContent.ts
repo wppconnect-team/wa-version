@@ -1,5 +1,5 @@
 /*!
- * Copyright 2022 WPPConnect Team
+ * Copyright 2024 WPPConnect Team
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,9 +36,25 @@ export function getPageContent(
 
   const versions = getAvailableVersions();
 
-  const max = semver.maxSatisfying(versions, versionMatch, {
-    includePrerelease,
-  });
+  function getHighestMatchingAlphaVersion(versions: string[], pattern: any) {
+    const regexPattern = pattern.replace('.', '\\.').replace('x', '\\d+');
+    const regex = new RegExp(`^${regexPattern}`);
+
+    const filteredVersions = versions.filter((version) => regex.test(version));
+
+    if (filteredVersions.length === 0) {
+      return null;
+    }
+
+    const sortedVersions = filteredVersions.sort(semver.rcompare);
+
+    return sortedVersions[0];
+  }
+
+  const max =
+    semver.maxSatisfying(versions, versionMatch, {
+      includePrerelease,
+    }) || getHighestMatchingAlphaVersion(versions, versionMatch);
 
   if (!max) {
     throw new Error(`Version not available for ${versionMatch}`);
@@ -48,3 +64,5 @@ export function getPageContent(
     encoding: 'utf8',
   });
 }
+
+getPageContent('2.3000.10125x');
