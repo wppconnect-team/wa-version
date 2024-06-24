@@ -8,9 +8,9 @@
 [![Lint Status](https://img.shields.io/github/actions/workflow/status/wppconnect-team/wa-version/lint.yml?branch=main&label=lint)](https://github.com/wppconnect/wa-version/actions)
 [![release-it](https://img.shields.io/badge/%F0%9F%93%A6%F0%9F%9A%80-release--it-e10079.svg)](https://github.com/release-it/release-it)
 
-> WPPConnect/WA-Version é um projeto open source com o intuito de ajudar ferramentas de automatização de navegação do WhatsApp Web, fazendo que seja possível acessar versões mais antigas das páginas, assim dando um tempo maior para adaptar as atualizações
+> WPPConnect/WA-Version is an open-source project to help WhatsApp Web navigation automation tools, making it possible to access older versions of the pages, thus allowing more time to adapt to the updates.
 
-## Nossos canais online
+## Our online channels
 
 [![Discord](https://img.shields.io/discord/844351092758413353?color=blueviolet&label=Discord&logo=discord&style=flat)](https://discord.gg/JU5JGGKGNG)
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-32AFED?logo=telegram)](https://t.me/wppconnect)
