@@ -165,12 +165,6 @@
       "expire": "2024-03-31T06:12:00.141Z"
     },
     {
-      "version": "2.2413.51-beta",
-      "beta": true,
-      "released": "2024-04-02T01:35:56.259Z",
-      "expire": "2024-06-30T23:19:19.506Z"
-    },
-    {
       "version": "2.3000.1012447370-alpha",
       "beta": false,
       "released": "2024-04-02T01:35:56.260Z",
@@ -1405,7 +1399,13 @@
       "beta": false,
       "released": "2024-06-29T18:15:18.248Z",
       "expire": "2024-06-29T18:15:18.248Z"
+    },
+    {
+      "version": "2.3000.1014590669-alpha",
+      "beta": false,
+      "released": "2024-07-01T13:17:28.022Z",
+      "expire": "2024-07-01T13:17:28.022Z"
     }
   ],
-  "currentAlpha": "2.3000.1014587000-alpha"
+  "currentAlpha": "2.3000.1014590669-alpha"
 }
