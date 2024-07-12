@@ -1,3 +1,9 @@
+## 1.5.72 (2024-07-12)
+
+### Bug Fixes
+
+- Update whatsapp expire dates in alpha versions ([748feec](https://github.com/wppconnect-team/wa-version/commit/748feecb97ae2e6a1210eededab1e7344afa1024))
+
 ## 1.5.71 (2024-07-12)
 
 ### Bug Fixes
