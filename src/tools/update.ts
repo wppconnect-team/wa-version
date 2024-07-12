@@ -27,6 +27,7 @@ import { fetchLatest } from '../fetchLatest';
 import { fetchLatestAlpha } from '../fetchLatestAlpha';
 import { fetchLatestBeta } from '../fetchLatestBeta';
 import { getAvailableVersions } from '../getAvailableVersions';
+import { getVersionInfo } from '../getVersionInfo';
 import { getPageContent } from '../getPageContent';
 
 /**
@@ -83,8 +84,19 @@ async function checkActiveVersions() {
       continue;
     }
 
+    // Set outdated version => 2.3000.x-alpha
+    const info = getVersionInfo(version);
+    const expire = new Date(info?.expire as string);
+    const today = new Date();
+    if (today > expire) {
+      process.stderr.write(`outdated\n`);
+      outdated.push(version);
+      continue;
+    }
+
     const content = getPageContent(version);
 
+    // Check for versions < 2.3000.x
     const matches = content.match(/"hard_expire_time"\s+data-time="([\d.]+)"/);
 
     if (matches) {
