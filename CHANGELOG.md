@@ -1,3 +1,9 @@
+## 1.5.71 (2024-07-12)
+
+### Bug Fixes
+
+- Remove outdate versions ([810e697](https://github.com/wppconnect-team/wa-version/commit/810e6972075bd11f327293eb0451509d64f49a06))
+
 ## [1.5.70](https://github.com/wppconnect-team/wa-version/compare/v1.5.69...v1.5.70) (2024-07-12)
 
 ### Bug Fixes
