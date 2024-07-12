@@ -218,6 +218,8 @@ async function updateJsonFile() {
 
     const released: Date = new Date();
     let expire: Date = new Date();
+    // As WhatsApp Web is no longer expiring versions, we have fixed a date based on the expiration time of previous versions
+    expire.setMonth(expire.getMonth() + 3);
 
     const html = getPageContent(versionNumber);
     const matches = html.match(/"hard_expire_time"\s+data-time="([\d.]+)"/);
