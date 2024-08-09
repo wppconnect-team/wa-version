@@ -853,7 +853,13 @@
       "beta": false,
       "released": "2024-08-09T02:08:49.530Z",
       "expire": "2024-10-09T02:08:49.530Z"
+    },
+    {
+      "version": "2.3000.1015541331-alpha",
+      "beta": false,
+      "released": "2024-08-09T12:53:33.827Z",
+      "expire": "2024-10-09T12:53:33.827Z"
     }
   ],
-  "currentAlpha": "2.3000.1015530181-alpha"
+  "currentAlpha": "2.3000.1015541331-alpha"
 }
