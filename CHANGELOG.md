@@ -1,3 +1,5 @@
+## 1.5.228 (2024-08-16)
+
 ## [1.5.227](https://github.com/wppconnect-team/wa-version/compare/v1.5.226...v1.5.227) (2024-08-16)
 
 ### Bug Fixes
