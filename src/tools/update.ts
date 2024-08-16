@@ -185,7 +185,7 @@ async function updateLatest() {
 async function updateJsonFile() {
   process.stderr.write(`Updating versions.json file\n`);
 
-  const currentVersion = await fetchCurrentVersion();
+  const currentVersion = await fetchCurrentAlphaVersion();
   const currentBeta = await fetchCurrentBetaVersion();
   const currentAlpha = await fetchCurrentAlphaVersion();
 
