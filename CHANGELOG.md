@@ -1,3 +1,9 @@
+## 1.5.770 (2024-12-09)
+
+### Bug Fixes
+
+- Added new version: 2.3000.1018720590-alpha ([c2154d0](https://github.com/wppconnect-team/wa-version/commit/c2154d05f8b9bcd466f7167ddb11d4bc10064de8))
+
 ## 1.5.769 (2024-12-09)
 
 ### Bug Fixes
