@@ -1,13 +1,7 @@
 {
   "currentBeta": null,
-  "currentVersion": "2.3000.1018761479-alpha",
+  "currentVersion": "2.3000.1018771914-alpha",
   "versions": [
-    {
-      "version": "2.3000.1017231525-alpha",
-      "beta": false,
-      "released": "2024-10-10T18:19:31.721Z",
-      "expire": "2024-12-10T18:19:31.721Z"
-    },
     {
       "version": "2.3000.1017243231-alpha",
       "beta": false,
@@ -919,7 +913,13 @@
       "beta": false,
       "released": "2024-12-10T15:41:34.562Z",
       "expire": "2025-02-10T15:41:34.562Z"
+    },
+    {
+      "version": "2.3000.1018771914-alpha",
+      "beta": false,
+      "released": "2024-12-10T22:14:29.070Z",
+      "expire": "2025-02-10T22:14:29.070Z"
     }
   ],
-  "currentAlpha": "2.3000.1018761479-alpha"
+  "currentAlpha": "2.3000.1018771914-alpha"
 }
