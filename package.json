@@ -1,6 +1,6 @@
 {
   "name": "@wppconnect/wa-version",
-  "version": "1.5.1102",
+  "version": "1.5.1103",
   "description": "List of WhatsApp Web HTML",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
