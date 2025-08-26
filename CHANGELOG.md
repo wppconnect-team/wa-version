@@ -1,3 +1,9 @@
+## 1.5.2104 (2025-08-26)
+
+### Bug Fixes
+
+- removed bugged version ([22ef371](https://github.com/wppconnect-team/wa-version/commit/22ef37149be91a0c60e89788749e2dad3ac62622))
+
 ## [1.5.2103](https://github.com/wppconnect-team/wa-version/compare/v1.5.2102...v1.5.2103) (2025-08-26)
 
 ### Bug Fixes
