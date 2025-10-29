@@ -1,6 +1,6 @@
 {
   "currentBeta": null,
-  "currentVersion": "2.3000.1029072057-alpha",
+  "currentVersion": "2.3000.1029075311-alpha",
   "versions": [
     {
       "version": "2.3000.1026474633-alpha",
@@ -1347,5 +1347,5 @@
       "expire": "2025-12-29T01:17:54.884Z"
     }
   ],
-  "currentAlpha": "2.3000.1029072057-alpha"
+  "currentAlpha": "2.3000.1029075311-alpha"
 }
