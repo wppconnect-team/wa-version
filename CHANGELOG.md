@@ -1,3 +1,9 @@
+## [1.5.2802](https://github.com/wppconnect-team/wa-version/compare/v1.5.2801...v1.5.2802) (2025-12-08)
+
+### Bug Fixes
+
+- Added new version: 2.3000.1030778328-alpha ([2b1014c](https://github.com/wppconnect-team/wa-version/commit/2b1014c6d2df9b46370ef3659e9cd3ba4f438747))
+
 ## [1.5.2801](https://github.com/wppconnect-team/wa-version/compare/v1.5.2800...v1.5.2801) (2025-12-08)
 
 ### Bug Fixes
