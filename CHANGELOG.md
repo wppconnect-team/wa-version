@@ -1,3 +1,9 @@
+## [1.5.2938](https://github.com/wppconnect-team/wa-version/compare/v1.5.2937...v1.5.2938) (2025-12-29)
+
+### Bug Fixes
+
+- Removed outdated version: 2.3000.1029125653-alpha ([42a3cc7](https://github.com/wppconnect-team/wa-version/commit/42a3cc76c7be4233d743d6288d181a8665017dc5))
+
 ## [1.5.2937](https://github.com/wppconnect-team/wa-version/compare/v1.5.2936...v1.5.2937) (2025-12-29)
 
 ### Bug Fixes
