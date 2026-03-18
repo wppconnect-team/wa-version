@@ -22,7 +22,6 @@ import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR, VERSIONS_FILE } from '../constants';
 import { fetchCurrentAlphaVersion } from '../fetchCurrentAlphaVersion';
 import { fetchCurrentBetaVersion } from '../fetchCurrentBetaVersion';
-import { fetchCurrentVersion } from '../fetchCurrentVersion';
 import { fetchLatest } from '../fetchLatest';
 import { fetchLatestAlpha } from '../fetchLatestAlpha';
 import { fetchLatestBeta } from '../fetchLatestBeta';

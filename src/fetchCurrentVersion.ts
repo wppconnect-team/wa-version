@@ -41,7 +41,7 @@ export async function fetchCurrentVersion(): Promise<string | null> {
 
   const re = /(?:assets-manifest-)([\d.]+)\.json/g;
 
-  let matches: string[] | null = [];
+  let matches: string[] | null;
   do {
     matches = re.exec(textSW);
 
