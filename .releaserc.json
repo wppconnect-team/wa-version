@@ -1,6 +1,5 @@
 {
   "branches": ["main"],
-  "repositoryUrl": "https://github.com/wppconnect-team/wa-version",
   "tagFormat": "v${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -14,8 +13,7 @@
     [
       "@semantic-release/npm",
       {
-        "npmPublish": true,
-        "provenance": true
+        "npmPublish": true
       }
     ],
     [
