@@ -1,3 +1,8 @@
+## <small>1.5.3480 (2026-03-18)</small>
+
+- fix: Added new version: 2.3000.1035387442-alpha ([8494567](https://github.com/wppconnect-team/wa-version/commit/8494567))
+- ci(deps): update actions/setup-node action to v6 (#663) ([a9cb042](https://github.com/wppconnect-team/wa-version/commit/a9cb042)), closes [#663](https://github.com/wppconnect-team/wa-version/issues/663)
+
 ## [1.5.3479](https://github.com/wppconnect-team/wa-version/compare/v1.5.3478...v1.5.3479) (2026-03-17)
 
 ### Bug Fixes
