@@ -7,6 +7,7 @@ on:
         description: 'Tipo de incremento: patch, minor, major ou pre*'
         required: true
         default: 'patch'
+        type: choice
         options:
           - patch
           - minor
