@@ -1,3 +1,7 @@
+## <small>1.5.3527 (2026-03-23)</small>
+
+- fix: Added new version: 2.3000.1035731846-alpha ([cbdaeda](https://github.com/wppconnect-team/wa-version/commit/cbdaeda))
+
 ## <small>1.5.3526 (2026-03-23)</small>
 
 - chore: Updated versions.json ([211eb25](https://github.com/wppconnect-team/wa-version/commit/211eb25))
