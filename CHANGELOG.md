@@ -1,3 +1,9 @@
+## <small>1.5.3713 (2026-04-15)</small>
+
+- chore: Updated versions.json ([d29a6c7](https://github.com/wppconnect-team/wa-version/commit/d29a6c7))
+- fix: Removed outdated version: 2.3000.1033500535-alpha ([a6b8876](https://github.com/wppconnect-team/wa-version/commit/a6b8876))
+- build(deps-dev): update dependency prettier to ^3.8.3 (#666) ([d658169](https://github.com/wppconnect-team/wa-version/commit/d658169)), closes [#666](https://github.com/wppconnect-team/wa-version/issues/666)
+
 ## <small>1.5.3712 (2026-04-15)</small>
 
 - fix: Added new version: 2.3000.1037370178-alpha ([07c691d](https://github.com/wppconnect-team/wa-version/commit/07c691d))
