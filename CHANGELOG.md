@@ -1,3 +1,8 @@
+## <small>1.5.3722 (2026-04-16)</small>
+
+- fix: Added new version: 2.3000.1037486289-alpha ([a3ca53e](https://github.com/wppconnect-team/wa-version/commit/a3ca53e))
+- build(deps-dev): update dependency @tony.ganchev/eslint-plugin-header to ^3.4.3 (#668) ([cb26c77](https://github.com/wppconnect-team/wa-version/commit/cb26c77)), closes [#668](https://github.com/wppconnect-team/wa-version/issues/668)
+
 ## <small>1.5.3721 (2026-04-16)</small>
 
 - fix: Added new version: 2.3000.1037471135-alpha ([caba1cd](https://github.com/wppconnect-team/wa-version/commit/caba1cd))
