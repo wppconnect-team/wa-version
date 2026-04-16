@@ -1,3 +1,7 @@
+## <small>1.5.3721 (2026-04-16)</small>
+
+- fix: Added new version: 2.3000.1037471135-alpha ([caba1cd](https://github.com/wppconnect-team/wa-version/commit/caba1cd))
+
 ## <small>1.5.3720 (2026-04-16)</small>
 
 - fix: Added new version: 2.3000.1037463644-alpha ([db0f07f](https://github.com/wppconnect-team/wa-version/commit/db0f07f))
