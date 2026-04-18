@@ -1,3 +1,9 @@
+## <small>1.5.3736 (2026-04-18)</small>
+
+- fix: Added new version: 2.3000.1037622359-alpha ([6ffa782](https://github.com/wppconnect-team/wa-version/commit/6ffa782))
+- fix: Removed outdated version: 2.3000.1033585429-alpha ([f644871](https://github.com/wppconnect-team/wa-version/commit/f644871))
+- build(deps-dev): update typescript-eslint monorepo to ^8.58.2 (#670) ([9364b3b](https://github.com/wppconnect-team/wa-version/commit/9364b3b)), closes [#670](https://github.com/wppconnect-team/wa-version/issues/670)
+
 ## <small>1.5.3735 (2026-04-18)</small>
 
 - fix: Added new version: 2.3000.1037607845-alpha ([9aaae1f](https://github.com/wppconnect-team/wa-version/commit/9aaae1f))
