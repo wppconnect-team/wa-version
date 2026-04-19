@@ -1,3 +1,8 @@
+## <small>1.5.3750 (2026-04-19)</small>
+
+- chore: Updated versions.json ([11c4747](https://github.com/wppconnect-team/wa-version/commit/11c4747))
+- fix: Removed outdated version: 2.3000.1033703022-alpha ([8bee4ba](https://github.com/wppconnect-team/wa-version/commit/8bee4ba))
+
 ## <small>1.5.3749 (2026-04-19)</small>
 
 - fix: Added new version: 2.3000.1037662086-alpha ([2e4b692](https://github.com/wppconnect-team/wa-version/commit/2e4b692))
