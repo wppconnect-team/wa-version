@@ -52,7 +52,7 @@
     "husky": "^9.1.7",
     "prettier": "^3.8.3",
     "pretty-quick": "^4.2.2",
-    "release-it": "^15.11.0",
+    "release-it": "^20.0.1",
     "shx": "^0.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
