@@ -33,9 +33,9 @@
     "semver": "^7.7.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.8.1",
-    "@commitlint/config-conventional": "^17.8.1",
-    "@commitlint/cz-commitlint": "^17.8.1",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/cz-commitlint": "^20.5.3",
     "@eslint/js": "^10.0.1",
     "@tony.ganchev/eslint-plugin-header": "^3.4.3",
     "@types/node": "^16.18.126",
