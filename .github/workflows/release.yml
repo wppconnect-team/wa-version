@@ -23,8 +23,8 @@ jobs:
 
       - name: Setup GIT
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "joaosouz4dev"
+          git config --global user.email "47183663+joaosouz4dev@users.noreply.github.com"
 
       - name: Setup Node
         uses: actions/setup-node@v6.3.0
