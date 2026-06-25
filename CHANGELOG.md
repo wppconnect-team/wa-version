@@ -1,3 +1,8 @@
+## <small>1.5.4216 (2026-06-25)</small>
+
+- fix: Added new version: 2.3000.1042123743-alpha ([1b38165](https://github.com/wppconnect-team/wa-version/commit/1b38165))
+- ci: use joaosouz4dev for automated commits ([35c8d30](https://github.com/wppconnect-team/wa-version/commit/35c8d30))
+
 ## <small>1.5.4215 (2026-06-25)</small>
 
 - fix: Added new version: 2.3000.1042114800-alpha ([5dcec67](https://github.com/wppconnect-team/wa-version/commit/5dcec67))
