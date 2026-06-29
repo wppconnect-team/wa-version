@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":prHourlyLimitNone", ":semanticCommits"],
+  "extends": ["config:recommended", ":prHourlyLimitNone", ":semanticCommits"],
   "ignorePaths": ["html/**"],
   "prConcurrentLimit": 3,
   "lockFileMaintenance": {
