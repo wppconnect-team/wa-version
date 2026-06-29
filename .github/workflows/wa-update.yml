@@ -7,8 +7,9 @@ on:
   pull_request:
     branches:
       - '*'
+  workflow_dispatch:
   schedule:
-    - cron: '0,30 * * * *'
+    - cron: '5,35 * * * *'
 
 jobs:
   wa-update:
