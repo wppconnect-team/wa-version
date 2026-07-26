@@ -1,3 +1,9 @@
+## <small>1.5.4438 (2026-07-26)</small>
+
+- chore: Updated versions.json ([f19e4ab](https://github.com/wppconnect-team/wa-version/commit/f19e4ab))
+- fix: Removed outdated version: 2.3000.1040125391-alpha ([526248e](https://github.com/wppconnect-team/wa-version/commit/526248e))
+- build(deps-dev): update dependency eslint-plugin-prettier to ^5.5.6 (#677) ([3712d52](https://github.com/wppconnect-team/wa-version/commit/3712d52)), closes [#677](https://github.com/wppconnect-team/wa-version/issues/677)
+
 ## <small>1.5.4437 (2026-07-26)</small>
 
 - fix: Added new version: 2.3000.1043861459-alpha ([4827a71](https://github.com/wppconnect-team/wa-version/commit/4827a71))
