@@ -1,3 +1,9 @@
+## <small>1.5.4441 (2026-07-26)</small>
+
+- chore: Updated versions.json ([84831f7](https://github.com/wppconnect-team/wa-version/commit/84831f7))
+- fix: Removed outdated version: 2.3000.1040146433-alpha ([db07c3a](https://github.com/wppconnect-team/wa-version/commit/db07c3a))
+- build(deps-dev): update dependency prettier to ^3.9.6 (#679) ([8e4f5ba](https://github.com/wppconnect-team/wa-version/commit/8e4f5ba)), closes [#679](https://github.com/wppconnect-team/wa-version/issues/679)
+
 ## <small>1.5.4440 (2026-07-26)</small>
 
 - chore: Updated versions.json ([99c65a3](https://github.com/wppconnect-team/wa-version/commit/99c65a3))
