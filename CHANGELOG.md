@@ -1,3 +1,9 @@
+## <small>1.5.4443 (2026-07-27)</small>
+
+- fix: Added new version: 2.3000.1043880044-alpha ([5bb0572](https://github.com/wppconnect-team/wa-version/commit/5bb0572))
+- fix: Removed outdated version: 2.3000.1040199739-alpha ([54e5931](https://github.com/wppconnect-team/wa-version/commit/54e5931))
+- build(deps): update dependency semver to ^7.8.5 (#681) ([356a314](https://github.com/wppconnect-team/wa-version/commit/356a314)), closes [#681](https://github.com/wppconnect-team/wa-version/issues/681)
+
 ## <small>1.5.4442 (2026-07-27)</small>
 
 - chore: Updated versions.json ([5556f11](https://github.com/wppconnect-team/wa-version/commit/5556f11))
