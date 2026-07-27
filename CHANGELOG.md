@@ -1,3 +1,9 @@
+## <small>1.5.4444 (2026-07-27)</small>
+
+- chore: Updated versions.json ([43c8c9a](https://github.com/wppconnect-team/wa-version/commit/43c8c9a))
+- fix: Removed outdated version: 2.3000.1040214237-alpha ([0461ff7](https://github.com/wppconnect-team/wa-version/commit/0461ff7))
+- ci(deps): update actions/setup-node action to v6.5.0 (#682) ([cb0651d](https://github.com/wppconnect-team/wa-version/commit/cb0651d)), closes [#682](https://github.com/wppconnect-team/wa-version/issues/682)
+
 ## <small>1.5.4443 (2026-07-27)</small>
 
 - fix: Added new version: 2.3000.1043880044-alpha ([5bb0572](https://github.com/wppconnect-team/wa-version/commit/5bb0572))
