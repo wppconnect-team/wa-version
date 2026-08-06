@@ -1,3 +1,7 @@
+## <small>1.5.4526 (2026-08-06)</small>
+
+- fix: Added new version: 2.3000.1044606470-alpha ([deedb64](https://github.com/wppconnect-team/wa-version/commit/deedb64))
+
 ## <small>1.5.4525 (2026-08-06)</small>
 
 - fix: Added new version: 2.3000.1044587846-alpha ([633e059](https://github.com/wppconnect-team/wa-version/commit/633e059))
