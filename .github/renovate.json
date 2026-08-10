@@ -10,7 +10,7 @@
   "packageRules": [
     {
       "description": "Use bump strategy",
-      "matchPackagePatterns": ["*"],
+      "matchPackageNames": ["*"],
       "rangeStrategy": "bump",
       "semanticCommitType": "build",
       "labels": ["dependencies"]
