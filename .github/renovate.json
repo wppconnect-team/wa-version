@@ -38,7 +38,7 @@
     {
       "description": "Ignore major version",
       "matchPackageNames": ["@types/node"],
-      "allowedVersions": "<17"
+      "allowedVersions": "<25"
     },
     {
       "description": "Ignore major version",
