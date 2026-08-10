@@ -3,7 +3,7 @@ name: wa-update
 on:
   push:
     branches:
-      - '*'
+      - main
   pull_request:
     branches:
       - '*'
@@ -14,6 +14,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'release' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   wa-update:
     runs-on: ubuntu-latest
@@ -21,6 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
+          ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
           token: ${{ github.event_name == 'pull_request' && github.token || secrets.PERSONAL_TOKEN }}
 
       - name: Setup GIT
