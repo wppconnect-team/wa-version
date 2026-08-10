@@ -1,3 +1,8 @@
+## <small>1.5.4556 (2026-08-10)</small>
+
+- fix: Added new version: 2.3000.1044848904-alpha ([0ecedb5](https://github.com/wppconnect-team/wa-version/commit/0ecedb5))
+- build(deps-dev): update dependency eslint to ^10.8.1 (#685) ([0406a51](https://github.com/wppconnect-team/wa-version/commit/0406a51)), closes [#685](https://github.com/wppconnect-team/wa-version/issues/685)
+
 ## <small>1.5.4555 (2026-08-10)</small>
 
 - chore: Updated versions.json ([3f5f90b](https://github.com/wppconnect-team/wa-version/commit/3f5f90b))
