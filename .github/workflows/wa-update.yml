@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ github.event_name == 'pull_request' && github.token || secrets.PERSONAL_TOKEN }}
 
       - name: Setup GIT
         run: |
