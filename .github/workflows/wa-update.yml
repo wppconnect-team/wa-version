@@ -52,7 +52,7 @@ jobs:
         id: update
         run: npm run wa-update
         env:
-          WA_COMMIT: true
+          WA_COMMIT: ${{ github.event_name != 'pull_request' }}
 
       - name: Git Status
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
@@ -63,7 +63,7 @@ jobs:
         run: git clean -fd
 
       - name: Release
-        if: ${{ steps.update.outputs.hasChanges == 'true' }}
+        if: ${{ steps.update.outputs.hasChanges == 'true' && github.event_name != 'pull_request' }}
         run: npm run release -- --ci -i patch
 
       - name: Discord Notification (Outdated)
