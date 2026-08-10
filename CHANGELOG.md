@@ -1,3 +1,8 @@
+## <small>1.5.4556 (2026-08-10)</small>
+
+- fix: Added new version: 2.3000.1044848904-alpha ([bbdd774](https://github.com/wppconnect-team/wa-version/commit/bbdd774))
+- Merge pull request #673 from alceops/alce/renovate-config-recommended-20260501 ([6bf5167](https://github.com/wppconnect-team/wa-version/commit/6bf5167)), closes [#673](https://github.com/wppconnect-team/wa-version/issues/673)
+
 ## <small>1.5.4555 (2026-08-10)</small>
 
 - chore: Updated versions.json ([3f5f90b](https://github.com/wppconnect-team/wa-version/commit/3f5f90b))
