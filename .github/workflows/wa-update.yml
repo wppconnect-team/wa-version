@@ -26,7 +26,7 @@ jobs:
           git config --global user.email "47183663+joaosouz4dev@users.noreply.github.com"
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24.19.0
 
