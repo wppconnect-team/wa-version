@@ -1,3 +1,5 @@
+## 1.5.4557 (2026-08-10)
+
 ## <small>1.5.4556 (2026-08-10)</small>
 
 - fix: Added new version: 2.3000.1044848904-alpha ([0ecedb5](https://github.com/wppconnect-team/wa-version/commit/0ecedb5))
