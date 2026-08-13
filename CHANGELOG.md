@@ -1,3 +1,5 @@
+## [1.5.4594](https://github.com/wppconnect-team/wa-version/compare/v1.5.4593...v1.5.4594) (2026-08-13)
+
 ## [1.5.4593](https://github.com/wppconnect-team/wa-version/compare/v1.5.4592...v1.5.4593) (2026-08-13)
 
 ## [1.5.4592](https://github.com/wppconnect-team/wa-version/compare/v1.5.4591...v1.5.4592) (2026-08-13)
