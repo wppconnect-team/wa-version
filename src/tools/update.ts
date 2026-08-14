@@ -261,6 +261,23 @@ async function updateJsonFile() {
 async function run() {
   const outdated = await checkActiveVersions();
   const newVersion = await updateLatest();
+
+  // The outdated files must be removed before updating versions.json,
+  // otherwise getAvailableVersions() still lists them and the removed
+  // versions remain in the file until the next execution
+  if (isCI && runCommit) {
+    for (const version of outdated) {
+      await execa('git', ['rm', getVersionPath(version)]);
+      const { stdout } = await execa('git', [
+        'commit',
+        '-m',
+        `fix: Removed outdated version: ${version}`,
+        getVersionPath(version),
+      ]);
+      process.stderr.write(`${stdout}\n`);
+    }
+  }
+
   const hasChanges = !!newVersion || !!outdated.length;
   const hasJsonChanges = await updateJsonFile();
 
@@ -271,19 +288,11 @@ async function run() {
     setGitHubState('version', newVersion);
     setGitHubState('hasChanges', hasChanges);
     setGitHubState('hasJsonChanges', hasJsonChanges);
+    // Only a new version triggers a release, the removal of outdated
+    // versions is published together with the next release
+    setGitHubState('shouldRelease', !!newVersion);
 
     if (runCommit) {
-      for (const version of outdated) {
-        await execa('git', ['rm', getVersionPath(version)]);
-        const { stdout } = await execa('git', [
-          'commit',
-          '-m',
-          `fix: Removed outdated version: ${version}`,
-          getVersionPath(version),
-        ]);
-        process.stderr.write(`${stdout}\n`);
-      }
-
       if (newVersion) {
         await execa('git', ['add', getVersionPath(newVersion)]);
         await execa('git', ['add', VERSIONS_FILE]);

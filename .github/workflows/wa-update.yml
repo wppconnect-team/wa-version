@@ -71,12 +71,12 @@ jobs:
         run: git clean -fd
 
       - name: Release
-        if: ${{ steps.update.outputs.hasChanges == 'true' && github.event_name != 'pull_request' }}
+        if: ${{ steps.update.outputs.shouldRelease == 'true' && github.event_name != 'pull_request' }}
         run: npm run release -- --ci -i patch
 
       - name: Discord Notification (Outdated)
         uses: sarisia/actions-status-discord@v1
-        if: ${{ steps.update.outputs.hasOutdated == 'true' }}
+        if: ${{ steps.update.outputs.hasOutdated == 'true' && steps.update.outputs.shouldRelease == 'true' }}
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
