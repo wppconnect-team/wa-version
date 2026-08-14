@@ -156,24 +156,22 @@ async function updateLatest() {
     }
   }
 
-  const alphaVersion = await fetchCurrentAlphaVersion();
-  if (alphaVersion) {
-    // Check only part of version: 2.3000.1012058694-alpha -> 2.3000.101205
-    const hasNewVersion = versions
-      .map((v) => v.substring(0, 13))
-      .includes(alphaVersion.substring(0, 13));
+  // The version is read from the same response that is stored, a separated
+  // request can be answered with another build and generate a file named
+  // with a revision that is not the one inside of it
+  const alphaHtml = await fetchLatestAlpha();
+  const alphaMatches = alphaHtml.match(/"client_revision"\s*:\s*(\d+)/);
+  const alphaVersion = alphaMatches ? `2.3000.${alphaMatches[1]}-alpha` : null;
 
-    if (!hasNewVersion) {
-      process.stderr.write(`New version available: ${alphaVersion}\n`);
+  if (alphaVersion && !versions.includes(alphaVersion)) {
+    process.stderr.write(`New version available: ${alphaVersion}\n`);
 
-      process.stderr.write(`Generating new file\n`);
-      const html = await fetchLatestAlpha();
-      await fs.promises.writeFile(getVersionPath(alphaVersion), html, {
-        encoding: 'utf8',
-      });
-      process.stderr.write(`Done\n`);
-      return alphaVersion;
-    }
+    process.stderr.write(`Generating new file\n`);
+    await fs.promises.writeFile(getVersionPath(alphaVersion), alphaHtml, {
+      encoding: 'utf8',
+    });
+    process.stderr.write(`Done\n`);
+    return alphaVersion;
   }
 
   process.stderr.write(`is updated\n`);
