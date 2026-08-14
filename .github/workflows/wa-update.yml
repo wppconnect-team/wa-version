@@ -9,7 +9,7 @@ on:
       - '*'
   workflow_dispatch:
   schedule:
-    - cron: '5,35 * * * *'
+    - cron: '5 * * * *'
 
 permissions:
   contents: read
