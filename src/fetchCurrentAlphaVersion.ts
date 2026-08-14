@@ -18,6 +18,21 @@ import fetch from 'node-fetch';
 import { WA_URL, WA_USER_AGENT } from './constants';
 
 /**
+ * Return the alpha version declared inside of the page
+ * @param content HTML content of the page
+ * @returns Version number
+ */
+export function getAlphaVersionFromContent(content: string): string | null {
+  const matches = content.match(/"client_revision"\s*:\s*(\d+)/) || [];
+
+  if (matches[1]) {
+    return `2.3000.${matches[1]}-alpha`;
+  }
+
+  return null;
+}
+
+/**
  * Return the current active noraml version on WhatsApp WEB
  * @returns Version number
  */
@@ -36,11 +51,7 @@ export async function fetchCurrentAlphaVersion(): Promise<string | null> {
   const text = await response.text();
 
   if (text) {
-    const matches = text.match(/"client_revision"\s*:\s*(\d+)/) || [];
-
-    if (matches[1]) {
-      return `2.3000.${matches[1]}-alpha`;
-    }
+    return getAlphaVersionFromContent(text);
   }
 
   return null;

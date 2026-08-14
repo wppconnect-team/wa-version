@@ -20,7 +20,10 @@ import * as os from 'os';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR, VERSIONS_FILE } from '../constants';
-import { fetchCurrentAlphaVersion } from '../fetchCurrentAlphaVersion';
+import {
+  fetchCurrentAlphaVersion,
+  getAlphaVersionFromContent,
+} from '../fetchCurrentAlphaVersion';
 import { fetchCurrentBetaVersion } from '../fetchCurrentBetaVersion';
 import { fetchLatest } from '../fetchLatest';
 import { fetchLatestAlpha } from '../fetchLatestAlpha';
@@ -156,24 +159,21 @@ async function updateLatest() {
     }
   }
 
-  const alphaVersion = await fetchCurrentAlphaVersion();
-  if (alphaVersion) {
-    // Check only part of version: 2.3000.1012058694-alpha -> 2.3000.101205
-    const hasNewVersion = versions
-      .map((v) => v.substring(0, 13))
-      .includes(alphaVersion.substring(0, 13));
+  // The version is read from the same response that is stored, a separated
+  // request can be answered with another build and generate a file named
+  // with a revision that is not the one inside of it
+  const alphaHtml = await fetchLatestAlpha();
+  const alphaVersion = getAlphaVersionFromContent(alphaHtml);
 
-    if (!hasNewVersion) {
-      process.stderr.write(`New version available: ${alphaVersion}\n`);
+  if (alphaVersion && !versions.includes(alphaVersion)) {
+    process.stderr.write(`New version available: ${alphaVersion}\n`);
 
-      process.stderr.write(`Generating new file\n`);
-      const html = await fetchLatestAlpha();
-      await fs.promises.writeFile(getVersionPath(alphaVersion), html, {
-        encoding: 'utf8',
-      });
-      process.stderr.write(`Done\n`);
-      return alphaVersion;
-    }
+    process.stderr.write(`Generating new file\n`);
+    await fs.promises.writeFile(getVersionPath(alphaVersion), alphaHtml, {
+      encoding: 'utf8',
+    });
+    process.stderr.write(`Done\n`);
+    return alphaVersion;
   }
 
   process.stderr.write(`is updated\n`);
@@ -263,6 +263,23 @@ async function updateJsonFile() {
 async function run() {
   const outdated = await checkActiveVersions();
   const newVersion = await updateLatest();
+
+  // The outdated files must be removed before updating versions.json,
+  // otherwise getAvailableVersions() still lists them and the removed
+  // versions remain in the file until the next execution
+  if (isCI && runCommit) {
+    for (const version of outdated) {
+      await execa('git', ['rm', getVersionPath(version)]);
+      const { stdout } = await execa('git', [
+        'commit',
+        '-m',
+        `fix: Removed outdated version: ${version}`,
+        getVersionPath(version),
+      ]);
+      process.stderr.write(`${stdout}\n`);
+    }
+  }
+
   const hasChanges = !!newVersion || !!outdated.length;
   const hasJsonChanges = await updateJsonFile();
 
@@ -273,19 +290,11 @@ async function run() {
     setGitHubState('version', newVersion);
     setGitHubState('hasChanges', hasChanges);
     setGitHubState('hasJsonChanges', hasJsonChanges);
+    // Only a new version triggers a release, the removal of outdated
+    // versions is published together with the next release
+    setGitHubState('shouldRelease', !!newVersion);
 
     if (runCommit) {
-      for (const version of outdated) {
-        await execa('git', ['rm', getVersionPath(version)]);
-        const { stdout } = await execa('git', [
-          'commit',
-          '-m',
-          `fix: Removed outdated version: ${version}`,
-          getVersionPath(version),
-        ]);
-        process.stderr.write(`${stdout}\n`);
-      }
-
       if (newVersion) {
         await execa('git', ['add', getVersionPath(newVersion)]);
         await execa('git', ['add', VERSIONS_FILE]);
