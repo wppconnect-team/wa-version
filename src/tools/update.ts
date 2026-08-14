@@ -20,7 +20,10 @@ import * as os from 'os';
 import * as path from 'path';
 import { checkUpdate } from '../checkUpdate';
 import { HTML_DIR, VERSIONS_FILE } from '../constants';
-import { fetchCurrentAlphaVersion } from '../fetchCurrentAlphaVersion';
+import {
+  fetchCurrentAlphaVersion,
+  getAlphaVersionFromContent,
+} from '../fetchCurrentAlphaVersion';
 import { fetchCurrentBetaVersion } from '../fetchCurrentBetaVersion';
 import { fetchLatest } from '../fetchLatest';
 import { fetchLatestAlpha } from '../fetchLatestAlpha';
@@ -160,8 +163,7 @@ async function updateLatest() {
   // request can be answered with another build and generate a file named
   // with a revision that is not the one inside of it
   const alphaHtml = await fetchLatestAlpha();
-  const alphaMatches = alphaHtml.match(/"client_revision"\s*:\s*(\d+)/);
-  const alphaVersion = alphaMatches ? `2.3000.${alphaMatches[1]}-alpha` : null;
+  const alphaVersion = getAlphaVersionFromContent(alphaHtml);
 
   if (alphaVersion && !versions.includes(alphaVersion)) {
     process.stderr.write(`New version available: ${alphaVersion}\n`);
