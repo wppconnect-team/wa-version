@@ -49,6 +49,11 @@
       "description": "Ignore major version",
       "matchPackageNames": ["execa"],
       "allowedVersions": "<6"
+    },
+    {
+      "description": "Version 9 targets conventional-changelog-core 9, while conventional-changelog-cli bundles core 8, and the release entry comes out empty",
+      "matchPackageNames": ["conventional-changelog-angular"],
+      "allowedVersions": "<9"
     }
   ]
 }
