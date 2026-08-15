@@ -27,6 +27,8 @@ jobs:
         with:
           ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
           token: ${{ github.event_name == 'pull_request' && github.token || secrets.PERSONAL_TOKEN }}
+          # The changelog uses the last tag as the start of the commit range
+          fetch-tags: true
 
       - name: Setup GIT
         run: |
