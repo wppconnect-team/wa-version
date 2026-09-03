@@ -9,7 +9,7 @@ on:
       - '*'
   workflow_dispatch:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '5,35 * * * *'
 
 permissions:
   contents: read
@@ -99,3 +99,9 @@ jobs:
           description: |
             A new version of WhatsApp WEB has just been released.
             Version Number: `${{ fromJSON(steps.update.outputs.version) }}`
+
+      - name: Request immediate WA-JS compatibility check
+        if: ${{ steps.update.outputs.hasNewVersion == 'true' && github.event_name != 'pull_request' }}
+        run: gh workflow run compatibility-monitor.yml --repo wppconnect-team/wa-js -f trigger=wa-version
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
