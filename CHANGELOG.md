@@ -1,3 +1,11 @@
+## 1.5.5133 (2026-10-28)
+
+### Bug Fixes
+
+- Added new version: 2.3000.1052070306-alpha ([ce334d5](https://github.com/wppconnect-team/wa-version/commit/ce334d55e716a55a18137cb45be9f26fdaca38aa))
+- patch release-it Undici response handling ([#758](https://github.com/wppconnect-team/wa-version/issues/758)) ([f375abf](https://github.com/wppconnect-team/wa-version/commit/f375abf3281ef5e5180f411394eb12040c871ba0))
+- Removed outdated version: 2.3000.1046291534-alpha ([53532c3](https://github.com/wppconnect-team/wa-version/commit/53532c3a526e41669b0e66e9ec6a8398dc799ffe))
+
 ## [1.5.5132](https://github.com/wppconnect-team/wa-version/compare/v1.5.5131...v1.5.5132) (2026-10-28)
 
 ### Bug Fixes
