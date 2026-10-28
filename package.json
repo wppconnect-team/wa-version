@@ -62,5 +62,10 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
+  },
+  "overrides": {
+    "release-it": {
+      "undici@7.29.1": "7.30.1"
+    }
   }
 }
