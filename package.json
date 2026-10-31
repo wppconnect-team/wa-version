@@ -26,7 +26,8 @@
     "prepare": "husky install && npm run clean && npm run build",
     "release": "release-it",
     "wa-update": "ts-node ./src/tools/update.ts",
-    "watch": "tsc -w --sourceMap"
+    "watch": "tsc -w --sourceMap",
+    "test:minimatch": "node --test test/minimatch-compat.test.cjs"
   },
   "dependencies": {
     "node-fetch": "^2.7.0",
@@ -66,6 +67,10 @@
   "overrides": {
     "release-it": {
       "undici@7.29.1": "7.30.1"
+    },
+    "minimatch@>=4.0.0 <11.0.1": "11.0.1",
+    "glob@7.2.3": {
+      "minimatch": "file:../../vendor/wppconnect-minimatch-legacy-compat-1.0.1.tgz"
     }
   }
 }
