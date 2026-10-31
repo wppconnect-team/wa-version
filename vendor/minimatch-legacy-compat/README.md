@@ -1,6 +1,6 @@
 # Scoped legacy development-consumer facade
 
-All pattern compilation and matching use the unmodified upstream minimatch 11.0.1 engine, installed through the npm alias `minimatch-engine`. No version3 or version10 matching code is retained or relabelled. Modern namespace consumers receive upstream11.0.1 directly.
+All pattern compilation and matching use the unmodified upstream minimatch 11.0.3 engine, installed through the npm alias `minimatch-engine`. No version3 or version10 matching code is retained or relabelled. Modern namespace consumers receive upstream11.0.3 directly.
 
 This private facade supports only the contracts used by eslint-plugin-import and glob7: callable matching and helpers, the Minimatch constructor, glob traversal segment metadata and String.match. Legacy traversal disables row optimization/merging so globSet indices and nonull brace alternatives stay aligned. The removed makeRe API is represented by a test-only object because eslint-plugin-import calls only .test; it is not a RegExp and must not be used as a general regex serializer.
 
