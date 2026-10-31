@@ -6,7 +6,7 @@
   "main": "index.cjs",
   "license": "Apache-2.0",
   "dependencies": {
-    "minimatch-engine": "npm:minimatch@11.0.1"
+    "minimatch-engine": "npm:minimatch@11.0.3"
   },
   "files": [
     "index.cjs",
