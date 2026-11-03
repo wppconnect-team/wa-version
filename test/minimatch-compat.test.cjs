@@ -61,7 +61,9 @@ test('the installed facade is the reviewed source and delegates to a patched reg
   );
   assert.equal(
     legacyRequire('minimatch-engine/package.json').version,
-    '11.0.3'
+    require('../vendor/minimatch-legacy-compat/package.json').dependencies[
+      'minimatch-engine'
+    ].replace(/^npm:minimatch@/, '')
   );
   assert.equal(require('minimatch/package.json').version, '11.0.3');
   assert.equal(
