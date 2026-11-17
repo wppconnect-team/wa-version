@@ -1,61 +1,7 @@
 {
   "currentBeta": null,
-  "currentVersion": "2.3000.1054721061-alpha",
+  "currentVersion": "2.3000.1054966512-alpha",
   "versions": [
-    {
-      "version": "2.3000.1047643939-alpha",
-      "beta": false,
-      "released": "2026-09-16T04:36:36.862Z",
-      "expire": "2026-11-16T04:36:36.862Z"
-    },
-    {
-      "version": "2.3000.1047658374-alpha",
-      "beta": false,
-      "released": "2026-09-16T09:30:26.624Z",
-      "expire": "2026-11-16T09:30:26.624Z"
-    },
-    {
-      "version": "2.3000.1047675214-alpha",
-      "beta": false,
-      "released": "2026-09-16T14:21:13.832Z",
-      "expire": "2026-11-16T14:21:13.832Z"
-    },
-    {
-      "version": "2.3000.1047687307-alpha",
-      "beta": false,
-      "released": "2026-09-16T18:23:23.099Z",
-      "expire": "2026-11-16T18:23:23.099Z"
-    },
-    {
-      "version": "2.3000.1047700797-alpha",
-      "beta": false,
-      "released": "2026-09-16T21:38:33.102Z",
-      "expire": "2026-11-16T21:38:33.102Z"
-    },
-    {
-      "version": "2.3000.1047719127-alpha",
-      "beta": false,
-      "released": "2026-09-17T00:17:54.651Z",
-      "expire": "2026-11-17T00:17:54.651Z"
-    },
-    {
-      "version": "2.3000.1047740481-alpha",
-      "beta": false,
-      "released": "2026-09-17T03:53:54.427Z",
-      "expire": "2026-11-17T03:53:54.427Z"
-    },
-    {
-      "version": "2.3000.1047749307-alpha",
-      "beta": false,
-      "released": "2026-09-17T05:14:07.735Z",
-      "expire": "2026-11-17T05:14:07.735Z"
-    },
-    {
-      "version": "2.3000.1047769893-alpha",
-      "beta": false,
-      "released": "2026-09-17T10:21:32.886Z",
-      "expire": "2026-11-17T10:21:32.886Z"
-    },
     {
       "version": "2.3000.1047780587-alpha",
       "beta": false,
@@ -2089,7 +2035,13 @@
       "beta": false,
       "released": "2026-11-16T01:55:01.432Z",
       "expire": "2027-01-16T01:55:01.432Z"
+    },
+    {
+      "version": "2.3000.1054966512-alpha",
+      "beta": false,
+      "released": "2026-11-17T13:24:51.881Z",
+      "expire": "2027-01-17T13:24:51.881Z"
     }
   ],
-  "currentAlpha": "2.3000.1054721061-alpha"
+  "currentAlpha": "2.3000.1054966512-alpha"
 }

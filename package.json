@@ -1,6 +1,6 @@
 {
   "name": "@wppconnect/wa-version",
-  "version": "1.5.5216",
+  "version": "1.5.5217",
   "description": "List of WhatsApp Web HTML",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,7 +27,8 @@
     "release": "release-it",
     "wa-update": "ts-node ./src/tools/update.ts",
     "watch": "tsc -w --sourceMap",
-    "test:minimatch": "node --test test/minimatch-compat.test.cjs"
+    "test:minimatch": "node --test test/minimatch-compat.test.cjs",
+    "test:workflows": "node --test test/workflow-boundaries.test.cjs"
   },
   "dependencies": {
     "node-fetch": "^2.7.0",
@@ -52,6 +53,7 @@
     "eslint-plugin-prettier": "^5.5.7",
     "execa": "~5.1.1",
     "husky": "^9.1.7",
+    "js-yaml": "^4.3.2",
     "prettier": "^3.10.1",
     "pretty-quick": "^4.2.2",
     "release-it": "^21.1.2",

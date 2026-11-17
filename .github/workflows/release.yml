@@ -14,7 +14,8 @@ on:
           - major
 
 permissions:
-  contents: read
+  contents: write # push the release commit and tag
+  actions: write # dispatch publish.yml
 
 jobs:
   release:
@@ -22,8 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
-        with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Setup GIT
         run: |
@@ -55,3 +54,9 @@ jobs:
 
       - name: Release
         run: 'npx release-it --increment ${{ github.event.inputs.increment }}'
+
+      # Tags pushed with GITHUB_TOKEN don't fire `push: tags`; dispatch is exempt.
+      - name: Trigger publish
+        run: gh workflow run publish.yml --ref "v$(node -p "require('./package.json').version")"
+        env:
+          GH_TOKEN: ${{ github.token }}

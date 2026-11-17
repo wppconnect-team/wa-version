@@ -1,45 +1,60 @@
 name: wa-update
-
-on:
+'on':
   push:
     branches:
       - main
   pull_request:
     branches:
       - '*'
-  workflow_dispatch:
+  workflow_dispatch: null
   schedule:
-    - cron: '5,35 * * * *'
-
+    - cron: 5,35 * * * *
 permissions:
   contents: read
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'release' }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
-
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26.13.1
+          cache: npm
+      - name: Install Dependencies
+        run: npm ci
+      - name: Test workflow boundaries
+        run: npm run test:workflows
+      - name: Validate updater without writes
+        if: github.event_name == 'pull_request'
+        run: npm run wa-update
+        env:
+          WA_COMMIT: 'false'
   wa-update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
-          token: ${{ github.event_name == 'pull_request' && github.token || secrets.PERSONAL_TOKEN }}
-          # The changelog uses the last tag as the start of the commit range
+          ref: main
+          persist-credentials: true
           fetch-tags: true
-
       - name: Setup GIT
         run: |
           git config --global user.name "joaosouz4dev"
           git config --global user.email "47183663+joaosouz4dev@users.noreply.github.com"
-
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
           node-version: 26.13.1
-
       - name: Get npm cache directory
         id: npm-cache
         run: |
@@ -51,57 +66,53 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
       - name: Install Dependencies
         run: npm ci || npm install
-
       - name: Fix husky
         run: chmod ug+x .husky/pre-commit
-
       - name: Check Updates
         id: update
         run: npm run wa-update
         env:
-          WA_COMMIT: ${{ github.event_name != 'pull_request' }}
-
+          WA_COMMIT: 'true'
       - name: Git Status
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
         run: git status
-
       - name: Remove untracked files
         if: ${{ steps.update.outputs.hasChanges == 'true' }}
         run: git clean -fd
-
       - name: Release
         if: ${{ steps.update.outputs.shouldRelease == 'true' && github.event_name != 'pull_request' }}
         run: npm run release -- --ci -i patch
-
+      - name: Trigger publish
+        if: ${{ steps.update.outputs.shouldRelease == 'true' && github.event_name != 'pull_request' }}
+        run: gh workflow run publish.yml --ref "v$(node -p "require('./package.json').version")"
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Discord Notification (Outdated)
         uses: sarisia/actions-status-discord@v1
-        if: ${{ steps.update.outputs.hasOutdated == 'true' && steps.update.outputs.shouldRelease == 'true' }}
+        if: ${{ github.event_name != 'pull_request' && steps.update.outputs.hasOutdated == 'true' && steps.update.outputs.shouldRelease == 'true' }}
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
-          color: 0xCB2431
+          color: 13313073
           title: Outdated WhatsApp WEB versions
           description: |
             Some versions of WhatsApp WEB doesn't work anymore.
             Outdated versions: `${{ join(fromJSON(steps.update.outputs.outdated), '`, `') }}`
-
       - name: Discord Notification (New)
         uses: sarisia/actions-status-discord@v1
-        if: ${{ steps.update.outputs.hasNewVersion == 'true' }}
+        if: ${{ github.event_name != 'pull_request' && steps.update.outputs.hasNewVersion == 'true' }}
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           nodetail: true
-          color: 0x28A745
+          color: 2664261
           title: New version for WhatsApp WEB!
           description: |
             A new version of WhatsApp WEB has just been released.
             Version Number: `${{ fromJSON(steps.update.outputs.version) }}`
-
-      - name: Request immediate WA-JS compatibility check
-        if: ${{ steps.update.outputs.hasNewVersion == 'true' && github.event_name != 'pull_request' }}
-        run: gh workflow run compatibility-monitor.yml --repo wppconnect-team/wa-js -f trigger=wa-version
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+    if: github.event_name != 'pull_request'
+    needs: validate
+    permissions:
+      contents: write
+      actions: write
