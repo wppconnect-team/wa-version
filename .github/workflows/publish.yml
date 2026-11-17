@@ -4,13 +4,17 @@ on:
   push:
     tags:
       - 'v*'
+  # Dispatched by wa-update.yml and release.yml with --ref <tag>
+  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: write
-  
+
 jobs:
   publish:
+    # Manual dispatch from a branch must not publish
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -66,9 +70,3 @@ jobs:
           body: ${{ steps.generate_changelog.outputs.changelog }}
           draft: false
           prerelease: false
-
-      - name: Update WPPConnect Site
-        run: gh workflow run update-whatsapp-versions.yml --repo wppconnect-team/wppconnect-team.github.io
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
