@@ -12,7 +12,8 @@ on:
     - cron: '5,35 * * * *'
 
 permissions:
-  contents: read
+  contents: write # push the release commit and tag
+  actions: write # dispatch publish.yml
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || 'release' }}
@@ -26,7 +27,8 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
-          token: ${{ github.event_name == 'pull_request' && github.token || secrets.PERSONAL_TOKEN }}
+          # PR code must not get the write token on disk
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
           # The changelog uses the last tag as the start of the commit range
           fetch-tags: true
 
@@ -76,6 +78,13 @@ jobs:
         if: ${{ steps.update.outputs.shouldRelease == 'true' && github.event_name != 'pull_request' }}
         run: npm run release -- --ci -i patch
 
+      # Tags pushed with GITHUB_TOKEN don't fire `push: tags`; dispatch is exempt.
+      - name: Trigger publish
+        if: ${{ steps.update.outputs.shouldRelease == 'true' && github.event_name != 'pull_request' }}
+        run: gh workflow run publish.yml --ref "v$(node -p "require('./package.json').version")"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Discord Notification (Outdated)
         uses: sarisia/actions-status-discord@v1
         if: ${{ steps.update.outputs.hasOutdated == 'true' && steps.update.outputs.shouldRelease == 'true' }}
@@ -99,9 +108,3 @@ jobs:
           description: |
             A new version of WhatsApp WEB has just been released.
             Version Number: `${{ fromJSON(steps.update.outputs.version) }}`
-
-      - name: Request immediate WA-JS compatibility check
-        if: ${{ steps.update.outputs.hasNewVersion == 'true' && github.event_name != 'pull_request' }}
-        run: gh workflow run compatibility-monitor.yml --repo wppconnect-team/wa-js -f trigger=wa-version
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
