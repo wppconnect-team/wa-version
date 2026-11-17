@@ -65,7 +65,10 @@ test('the installed facade is the reviewed source and delegates to a patched reg
       'minimatch-engine'
     ].replace(/^npm:minimatch@/, '')
   );
-  assert.equal(require('minimatch/package.json').version, '11.0.3');
+  assert.equal(
+    require('minimatch/package.json').version,
+    require('../package-lock.json').packages['node_modules/minimatch'].version
+  );
   assert.equal(
     fs.readFileSync(owner.resolve('minimatch'), 'utf8').replace(/\r\n/g, '\n'),
     fs
@@ -93,9 +96,17 @@ test('both registry engines bound first-phase glob amplification', () => {
           return result;
         }
       }
-      new Probe(Array.from({length:12}, (_, i) => 'p'+i+'/**/../q'+i).join('/'),
-        { optimizationLevel: 2, braceExpandMax: 64 });
-      assert(peak > 1 && peak <= 64, 'first-phase pattern budget exceeded: '+peak);
+      let rejected = false;
+      try {
+        new Probe(Array.from({length:12}, (_, i) => 'p'+i+'/**/../q'+i).join('/'),
+          { optimizationLevel: 2, braceExpandMax: 64 });
+      } catch (error) {
+        assert.equal(error.name, 'RangeError');
+        assert.equal(error.message, "optimizationLevel 2: too many patterns from '**/..'");
+        rejected = true;
+      }
+      if (!rejected)
+        assert(peak > 1 && peak <= 64, 'first-phase pattern budget exceeded: '+peak);
     `;
     const result = spawnSync(
       process.execPath,
@@ -157,6 +168,18 @@ test('the actual legacy development consumer still works', async () => {
         glob.sync('missing/*.{js,ts}', { cwd: scratch, nonull: true }),
         ['missing/*.js', 'missing/*.ts']
       );
+      assert.deepEqual(
+        glob.sync('missing/{1..3}.txt', { cwd: scratch, nonull: true }),
+        ['missing/1.txt', 'missing/2.txt', 'missing/3.txt']
+      );
+      for (const number of [1, 2, 3]) {
+        fs.writeFileSync(path.join(scratch, `number-${number}.txt`), '');
+      }
+      assert.deepEqual(glob.sync('number-{1..3}.txt', { cwd: scratch }), [
+        'number-1.txt',
+        'number-2.txt',
+        'number-3.txt',
+      ]);
       assert.deepEqual(
         await new Promise((resolve, reject) =>
           glob('**/*.js', { cwd: scratch }, (error, files) =>
