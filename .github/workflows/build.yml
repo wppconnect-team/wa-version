@@ -41,5 +41,8 @@ jobs:
       - name: Test patched glob engine and legacy consumers
         run: npm run test:minimatch
 
+      - name: Test workflow boundaries
+        run: npm run test:workflows
+
       - name: Build source
         run: npm run build
