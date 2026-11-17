@@ -72,7 +72,7 @@
     },
     "minimatch@>=4.0.0 <11.0.1": "11.0.3",
     "glob@7.2.3": {
-      "minimatch": "file:../../vendor/wppconnect-minimatch-legacy-compat-1.0.3.tgz"
+      "minimatch": "file:../../vendor/wppconnect-minimatch-legacy-compat-1.0.4.tgz"
     }
   }
 }
