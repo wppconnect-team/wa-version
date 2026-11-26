@@ -40,7 +40,7 @@
     "@commitlint/cz-commitlint": "^21.2.4",
     "@eslint/js": "^10.0.1",
     "@tony.ganchev/eslint-plugin-header": "^3.4.4",
-    "@types/node": "^24.19.2",
+    "@types/node": "^24.19.4",
     "@types/node-fetch": "^2.6.13",
     "@types/semver": "^7.8.0",
     "@typescript-eslint/eslint-plugin": "^8.74.0",
